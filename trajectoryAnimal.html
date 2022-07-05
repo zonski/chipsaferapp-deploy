@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous"> 
+        
+        <link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+
+    <div class="main-content">
+		<div class="main-content__wrapper">
+			<div id="entry-title" class="animal-title">
+				<div class="row">
+					<div class="col-md-8">
+					  <h1 data-i18n="trajectoryAnimal.title"></h1>
+					</div>
+
+					<div class="col-md-4">
+						<div class="main-content__controls">
+						  <button class="btn btn-success entry-action" data-action="backup">
+							<i class="material-icons">file_download</i>
+							<span>Backup</span>
+						  </button>
+						</div>					
+					</div>					
+				</div>
+			</div>
+			
+			<div id="trajectory-filter">
+				<div class="row">				
+					<div class="col-md-2 form-group">
+						<label data-i18n="trajectoryAnimal.fields.dateStart">Data Inicial (De)</label>
+						<input type="text" class="form-control field datepicker" id="startDate">
+					</div>
+					
+					<div class="col-md-2 form-group">
+						<label data-i18n="trajectoryAnimal.fields.dateEnd">Data Final (Até)</label>
+						<input type="text" class="form-control field datepicker" id="endDate">
+					</div>
+				</div>
+			</div>
+			
+			<div class="add-panel__controls">
+				<div class="row">
+					<div class="col-md-12 text-right ">
+						<button class="btn btn-success entry-action entry-btn" data-action="filter">
+						  <i class="material-icons">search</i>
+						  <span data-i18n="button.filter">Filtro</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div style="padding-bottom:10px">
+				</div>
+			</div
+
+			<div class="entry-table">
+			  <table id="entry-table" class="display table">
+				<thead>
+				  <tr>
+					<th data-i18n="animal.fields.deviceCode">Dispositivo</th>
+					<th data-i18n="animal.fields.code">Código</th>
+					<th data-i18n="animal.fields.nickName">Nome</th>
+					<th data-i18n="trajectoryAnimal.date">Data</th>
+					<th data-i18n="trajectoryAnimal.trajectory">Trajetória</th>
+				  </tr>
+				</thead>
+			  </table>
+			</div>
+      </div>
+    </div>
+
+	<div class="modal primary fade" id="georef-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<i class="material-icons vertical-center-header">map</i>
+					<h4 id="trajectory-title" class="modal-title vertical-center-header"></h4>
+				</div>
+
+				<div class="modal-body">
+					<div class="row"></div>
+						<div id="map"></div>
+				</div>
+
+				<div class="modal-footer trajectory-footer">
+				  <div class="row">
+              <div class="col-md-4 form-group"> 
+                  <label class="label-footer" data-i18n='trajectoryAnimal.map.start'></label>  
+                  <span id="start" class="input-value-label"></span> 
+              </div>
+
+              <div class="col-md-4 form-group"> 
+                  <label class="label-footer" data-i18n='trajectoryAnimal.map.end'></label>  
+                  <span id="end" class="input-value-label"></span> 
+              </div>
+
+              <div class="col-md-4 form-group"> 
+                  <label class="label-footer" data-i18n='trajectoryAnimal.map.duration'></label>
+                  <span id="duration" class="input-value-label"></span> 
+              </div>
+          </div>
+          <br>
+  				<div class="row">
+              <div class="col-md-6 form-group"> 
+                  <label class="label-footer" data-i18n='trajectoryAnimal.map.numberCoordinates'></label>
+                  <span id="numCoordinates" class="input-value-label"></span> 
+              </div>
+
+              <div class="col-md-6 form-group"> 
+                  <label class="label-footer" data-i18n='trajectoryAnimal.map.distance'></label>
+                  <span id="distance" class="input-value-label"></span> 
+              </div>
+
+          </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-p1r_ULTiJLbbUOwC2B2yywLGsQ3vIcM&libraries=drawing,geometry"></script>
+<script src="js/trajectoryAnimal.js"></script>
+      <script src="js/bundle-vendor-manage.js"></script>
+
+    <script src="js/bundle-util-manage.js"></script>
+</body>
+</html>

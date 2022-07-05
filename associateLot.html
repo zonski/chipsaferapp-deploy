@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous"> 
+        
+        <link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+
+	<div class="main-content">
+		<div class="main-content__wrapper">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 data-i18n="associateLot.title"></h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="entry-table main-content__wrapper">
+            <table id="entry-table" class="display table">
+              <thead>
+                <tr>
+                  <th hidden>Id</th>
+                  <th data-i18n="lot.fields.name">Nome</th>
+                  <th data-i18n="lot.fields.quantity">Quantidade</th>
+                  <th id="edit" data-i18n="entry.options">Opções</th>
+                </tr>
+              </thead>
+            </table>
+		</div>
+	</div>
+
+	<script src="js/associateLot.js"></script>
+      <script src="js/bundle-vendor-manage.js"></script>
+
+    <script src="js/bundle-util-manage.js"></script>
+</body>
+</html>

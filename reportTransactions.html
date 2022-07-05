@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous"> 
+
+        <link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+
+	<div class="main-content">
+		<div id="report-filter" class="add-panel add-panel--active">
+			<div class="add-panel__wrapper">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 data-i18n="report.transaction.title"></h1>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-2 form-group">
+						<label data-i18n="report.transaction.fields.tradingType">Tipo de Negociação</label>
+						<select class="form-control field required" id="tradingType">
+							<option value="" data-i18n="select.values.default" disabled selected>Selecione...</option>
+							<option value="0" data-i18n="transaction.fields.buy">Compra</option>
+							<option value="1" data-i18n="transaction.fields.sale">Venda</option>
+							<option value="2" data-i18n="transaction.fields.slaughterSale">Venda por Abate</option>
+						</select>
+					</div>
+					
+					<div class="col-md-3 form-group d-none" id="customerSupplier-div">
+						<label id="customerSupplierLabel">Cliente</label>                
+						<select class="form-control field sub" id="customerSupplier" data-sub="id" data-combo="customerSupplier"></select>
+					</div>
+
+					<div class="col-md-3 form-group">
+						<label data-i18n="report.transaction.fields.transactionPeriod">Período das Negociações</label>
+						<select class="form-control field required" id="periodOption">
+							<option value="" data-i18n="select.values.default" disabled selected>Selecione...</option>
+							<option value="1" data-i18n="select.values.period.all">Todo o período</option>
+							<option value="2" data-i18n="select.values.period.datesBetween">Datas entre...</option>
+						</select>
+					</div>
+				</div>
+			
+				<div class="row d-none" id="period-div">				
+					<div class="col-md-2 form-group">
+						<label data-i18n="report.transaction.fields.startDate">Periodo Inicial (De)</label>
+						<input type="text" class="form-control field datepicker" id="startDate">
+					</div>
+					
+					<div class="col-md-2 form-group">
+						<label data-i18n="report.transaction.fields.endDate">Periodo Final (Até)</label>
+						<input type="text" class="form-control field datepicker" id="endDate">
+					</div>			
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="add-panel__controls">
+			<div class="row">
+				<div class="col-md-12 text-right">
+					<button class="btn btn-danger report-action entry-btn" data-action="clear">
+					  <i class="material-icons">close</i>
+					  <span data-i18n="button.clear">Limpar</span>
+					</button>
+					<button class="btn btn-success report-action entry-btn" data-action="filter">
+					  <i class="material-icons">search</i>
+					  <span data-i18n="button.filter">Filtro</span>
+					</button>
+				</div>
+			</div>
+		</div>
+  
+
+		<div class="main-content__wrapper">
+			<div class="row">
+				<div class="col-md-12">
+				  <h1 data-i18n="report.transaction.title"></h1>
+				</div>
+			</div>
+			<div class="report-table">
+				<table id="report-table" class="display table-secondmodel">
+				  <thead>
+					<tr>						
+						<th style="width: 25%" id="customerSupplierHeader" data-i18n="transaction.fields.customersupplier">Cliente/Fornecedor</th>
+						<th style="width: 15%" data-i18n="transaction.fields.type">Tipo</th>
+						<th style="width: 10%" data-i18n="transaction.fields.date">Data</th>
+						<th style="width: 16%" data-i18n="report.transaction.animalsTraded">Animais Negociados</th>
+						<th style="width: 10%" data-i18n="transaction.fields.currency">Moeda</th>						
+						<th style="width: 14%" data-i18n="transaction.fields.value">Valor</th>			  
+					</tr>
+				  </thead>
+				</table>
+			</div>
+		</div>
+    </div>
+
+<script src="js/reportTransactions.js"></script>
+      <script src="js/bundle-vendor-report.js"></script>
+
+    <script src="js/bundle-util-report.js"></script>
+</body>
+</html>

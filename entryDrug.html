@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title data-i18n="home.title">Home</title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">	
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">		
+		
+		<link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css"> 
+		
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+<div class="main-content">
+  <div id="entry-add" class="add-panel">
+    <div class="add-panel__wrapper">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 data-i18n="drug.add">Adicionar Medicamentos</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <input type="hidden" class="form-control field number" id="id" disabled>
+
+        <div class="col-md-4 form-group">
+          <label data-i18n="drug.fields.name">Nome</label>
+          <input type="text" class="form-control field required" id="name" maxlength="50">
+        </div>
+
+        <div class="col-md-4 form-group">
+          <label data-i18n="drug.fields.dosage">Dosagem</label>
+          <input type="text" class="form-control field required" id="dosage" maxlength="20">
+        </div>
+
+        <div class="col-md-2 form-group">
+          <label data-i18n="drug.fields.immunization">Imunization</label>
+          <div class="col-auto">
+            <label class="sr-only" for="immunization" data-i18n="drug.fields.immunization">Imunization</label>
+            <div class="input-group mb-2 mb-sm-0">
+              <input type="text" class="form-control field number required" id="immunization" maxlength="3" data-i18n="[placeholder]drug.immunizationMonths">
+              <div class="input-group-addon">m</div>
+            </div>
+          </div>            
+        </div>
+
+        <div class="col-md-2 form-group">
+          <label data-i18n="drug.fields.shortage">Carência</label>
+          <div class="col-auto">
+            <label class="sr-only" for="shortage" data-i18n="drug.fields.shortage">shortage</label>
+            <div class="input-group mb-2 mb-sm-0">
+              <input type="text" class="form-control field number required" id="shortage" maxlength="3" data-i18n="[placeholder]drug.dosageDays">
+              <div class="input-group-addon">d</div>
+            </div>
+          </div>  
+        </div>
+
+        <div class="col-md-2 form-group">
+          <label data-i18n="drug.fields.active">Ativo</label>
+          <div class="select">
+            <select class="form-control field" id="active">
+              <option value="true" data-i18n="options.yes">Sim</option>
+              <option value="false" data-i18n="options.no">Não</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-3 form-group">
+          <label data-i18n="drug.fields.drugsClassification">Class. de Medicamentos</label>
+          <br>
+          <button class="btn btn-primary entry-action" data-action="selectDrugsClassification">
+            <span class="glyphicon glyphicon-th-large"></span>
+            <span data-i18n="button.select">Selecionar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="add-panel__controls">
+      <div class="row">
+        <div class="col-md-12 text-right">
+          <button class="btn btn-secondary entry-action entry-btn" data-action="addCancel">
+            <span class="glyphicon glyphicon-remove"></span>
+            <span data-i18n="entry.cancel">Cancelar</span>
+          </button>
+
+          <button class="btn btn-success entry-action entry-btn" data-action="submit">
+            <span class="glyphicon glyphicon-floppy-save"></span>
+            <span data-i18n="entry.save">Salvar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content__wrapper">
+    <div id="entry-title">
+      <div class="row">
+        <div class="col-md-8">
+          <h1 data-i18n="drug.title">Medicamentos</h1>
+        </div>
+        <div class="col-md-4">
+          <div class="main-content__controls">
+            <button class="btn btn-primary entry-action" data-action="addOpen">
+              <i class="material-icons">add</i>
+              <span data-i18n="drug.add">Adicionar Medicamentos</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry-table">
+      <table id="entry-table" class="display table">
+        <thead>
+          <tr>
+            <th data-i18n="drug.fields.name">Nome</th>
+            <th>ID</th>
+            <th data-i18n="drug.fields.dosage">Dosagem</th>
+            <th data-i18n="drug.fields.immunization">Imunização</th>
+            <th data-i18n="drug.fields.shortage">Carência</th>
+            <th data-i18n="drug.fields.active">Ativo</th>
+            <th data-i18n="drug.fields.drugsClassification">Class. de Medicamentos</th>
+            <th id="edit" data-i18n="entry.options">Opções</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="multiselect-modal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" data-i18n="drug.fields.drugsClassification">Class. de Medicamentos</h4>
+      </div>
+
+      <div class="modal-body multiselect" id="drugClassifications">
+        <table data-name="drugClassifications" id="multiselect-table" class="display">
+          <thead></thead>
+        </table>
+      </div>
+
+      <div class="modal-footer modal-center">
+        <button type="button" class="btn btn-default" id="btn-cancel">
+          <span class="glyphicon glyphicon-remove"></span>
+          <span data-i18n="button.cancel">Cancelar</span>
+        </button>
+
+        <button type="button" data-dismiss="modal" class="btn btn-primary" id="btn-confirm">
+          <span class="glyphicon glyphicon-ok"></span>
+          <span data-i18n="button.confirm">Confirmar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/entryDrug.js"></script>
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        
+        <script src="js/bundle-vendor.js"></script>
+		
+		<!--
+		<script src="../app/js/lib/bootstrapOld.min.js"></script>
+		<script src="../app/js/lib/datatables_new.js"></script>
+		
+		<script src="../app/js/lib/dataTables.buttons.min.js"></script> -->
+		
+
+        <script src="js/bundle-util.js"></script>
+    </body>
+</html>

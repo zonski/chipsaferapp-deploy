@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous"> 
+
+        <link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+    <div class="main-content">
+		<div id="report-filter" class="add-panel add-panel--active">
+          <div class="add-panel__wrapper">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 data-i18n="report.device.lastData.title"></h1>
+              </div>
+            </div>
+			
+			<div class="row">
+				<div class="col-md-3 form-group">
+					<label data-i18n="report.device.lastData.fields.periodDataReceived">Período de Dados Recebidos</label>
+					<select class="form-control field required" id="periodOption">
+						<option value="" data-i18n="select.values.default" disabled selected>Selecione...</option>
+						<option value="1" data-i18n="select.values.period.all">Todo o período</option>
+						<option value="2" data-i18n="select.values.period.datesBetween">Datas entre...</option>
+					</select>
+				</div>
+			</div> 
+			
+      		<div class="row d-none" id="period-div">		
+				<div class="col-md-3 form-group">
+					<label data-i18n="report.device.lastData.fields.startDate">Periodo Inicial (De)</label>
+					<input type="text" class="form-control field" id="startDate">
+					<span class="input-tooltip icon icon-calendar-2"></span>
+				</div>
+				
+				<div class="col-md-3 form-group">
+					<label data-i18n="report.device.lastData.fields.endDate">Periodo Final (Até)</label>
+					<input type="text" class="form-control field" id="endDate">
+					<span class="input-tooltip icon icon-calendar-2"></span>
+				</div>
+      		</div>  
+			
+			<div class="row">	
+					<div class="col-md-12">
+						<h3 data-i18n="report.device.lastData.highlightLines">Destacar Linhas no Relatório</h3>
+					</div>
+			</div>
+					<div class="row">
+						<div class="col-md-6 form-group form-inline">
+							<input type="checkbox" class="station-check" id="highlightInactiveDevices"  checked>
+							<label data-i18n="report.device.lastData.fields.inactiveDevices">Dispositivos Inativos</label>
+						
+							<div class="col-md-5">
+								<div class="input-group mb-2 mb-sm-0">
+									<input type="number" class="form-control field required" id="inactiveDays" min="1" value="1">
+									<div class="input-group-addon" data-i18n="report.device.lastData.fields.days"></div>
+								</div>	
+							</div>					
+						</div>
+					</div>
+			</div>
+		</div>
+
+          <div class="add-panel__controls">
+            <div class="row">
+              <div class="col-md-12 text-right">
+                <button class="btn btn-danger report-action entry-btn" data-action="clear">
+                  <i class="material-icons">close</i>
+                  <span data-i18n="button.clear">Limpar</span>
+                </button>
+                <button class="btn btn-success report-action entry-btn" data-action="filter">
+                  <i class="material-icons">search</i>
+                  <span data-i18n="button.filter">Filtro</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        <div class="main-content__wrapper">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 data-i18n="report.device.lastData.title">Relatório de Dispositivos</h1>
+            </div>
+          </div>
+		  
+          <div class="report-table">
+            <table id="report-table" class="display table-secondmodel">
+              <thead>
+                <tr>
+					<th style="width: 15%" data-i18n="animal.fields.deviceCode"></th>
+					<th style="width: 18%" data-i18n="report.device.lastData.animal"></th>
+					<th style="width: 15%" data-i18n="report.device.lastData.longitudeReceived"></th>
+					<th style="width: 15%" data-i18n="report.device.lastData.latitudeReceived"></th>				  
+					<th style="width: 8%" data-i18n="report.device.lastData.batteryReceived"></th>			  		  
+					<th style="width: 14%" data-i18n="report.device.lastData.dateReceived"></th>
+					<th style="width: 15%" data-i18n="report.device.lastData.timeWithoutData"></th>   
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+	  
+	</div>
+
+<script src="js/reportDevice.js"></script>
+      <script src="js/bundle-vendor-report.js"></script>
+
+    <script src="js/bundle-util-report.js"></script>
+</body>
+</html>

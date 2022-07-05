@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title data-i18n="home.title">Home</title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">	
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">		
+		
+		<link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css"> 
+		
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+
+    <div class="main-content">
+      <div id="entry-add" class="add-panel">
+        <div class="add-panel__wrapper">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 data-i18n="supplement.add">Adicionar Suplemento</h1>
+            </div>
+          </div>
+
+          <div class="row">
+            <input type="hidden" class="form-control field number" id="id" disabled>
+
+            <div class="col-md-3 form-group">
+              <label data-i18n="supplement.fields.name">Nome</label>
+              <input type="text" class="form-control field required" id="name" maxlength="50">
+            </div>
+
+            <div class="col-md-3 form-group">
+              <label data-i18n="supplement.fields.supplementtype">Tipo do Suplemento</label>
+              <div class="select">
+                <select class="form-control field sub" id="supplementType" data-sub="id" data-combo="supplementType"></select>
+              </div>
+            </div>
+
+            <div class="col-md-3 form-group">
+              <label data-i18n="supplement.fields.productbrand">Marca do Produto</label>
+              <input type="text" class="form-control field" id="productBrand" maxlength="50">
+            </div>
+
+  					<div class="col-md-3 form-group">
+              <label data-i18n="supplement.fields.expectedconsumption">Consumo Esperado</label>
+              <div class="col-auto">
+                  <label class="sr-only" for="shortage" data-i18n="resourceModel.fields.expectedconsumption">expectedConsumption</label>
+                  <div class="input-group mb-2 mb-sm-0">
+                  <input type="text" class="form-control field number required" id="expectedConsumption" maxlength="15" placeholder="g/animal/d">
+                  <div class="input-group-addon" data-i18n="supplement.measure.ganimalday"></div>
+                  </div>
+              </div>
+
+            </div>
+
+  					<div class="col-md-3 form-group">
+              <label data-i18n="supplement.fields.expectedweightgain">Ganho Esperado</label>
+
+              <div class="col-auto">
+                  <label class="sr-only" for="shortage" data-i18n="resourceModel.fields.weight">expectedWeightGain</label>
+                  <div class="input-group mb-2 mb-sm-0">
+                  <input type="text" class="form-control field number required" id="expectedWeightGain" maxlength="15" placeholder="g/animal/d">
+                  <div class="input-group-addon" data-i18n="supplement.measure.ganimalday"></div>
+                  </div>
+              </div>
+              
+            </div>
+
+  					<div class="col-md-3 form-group">
+              <label data-i18n="supplement.fields.weight">weight</label>
+              <div class="col-auto">
+                  <label class="sr-only" for="shortage" data-i18n="resourceModel.fields.weight">weight</label>
+                  <div class="input-group mb-2 mb-sm-0">
+                  <input type="text" class="form-control field number required" id="weight" maxlength="15" placeholder="kg">
+                  <div class="input-group-addon" data-i18n="supplement.measure.kg"></div>
+                  </div>
+              </div>
+            </div>
+
+  					<div class="col-md-3 form-group">
+              <label data-i18n="supplement.fields.averagecost">Custo Médio</label>
+              <div class="col-auto">
+                  <label class="sr-only" for="shortage" data-i18n="resourceModel.fields.averageCost">weight</label>
+                  <div class="input-group mb-2 mb-sm-0">
+                  <input type="text" class="form-control field number required" id="averageCost" maxlength="15" placeholder="U$">
+                  <div class="input-group-addon" data-i18n="supplement.measure.money"></div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 form-group">
+              <label data-i18n="ingredient.title">Ingredientes</label><br>
+              <button class="btn btn-primary entry-action" data-action="selectIngredients">
+                <span class="glyphicon glyphicon-th-large"></span>
+                <span data-i18n="button.select">Selecionar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="add-panel__controls">
+          <div class="row">
+            <div class="col-md-12 text-right">
+              <button class="btn btn-secondary entry-action entry-btn" data-action="addCancel">
+                <i class="material-icons">close</i>
+                <span data-i18n="entry.cancel">Cancelar</span>
+              </button>
+
+              <button class="btn btn-success entry-action entry-btn" data-action="submit">
+                <i class="material-icons">save</i>
+                <span data-i18n="entry.save"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content__wrapper">
+        <div id="entry-title">
+          <div class="row">
+            <div class="col-md-8">
+              <h1 data-i18n="supplement.title">Suplemento</h1>
+            </div>
+            <div class="col-md-4">
+              <div class="main-content__controls">
+                <button class="btn btn-primary entry-action" data-action="addOpen">
+                  <i class="material-icons">add</i>
+                  <span data-i18n="supplement.add">Adicionar Suplemento</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry-table">
+          <table id="entry-table" class="display table">
+            <thead>
+              <tr>
+                <th data-i18n="supplement.fields.name">Nome</th>
+                <th>ID</th>
+                <th data-i18n="supplement.fields.supplementtype">Suplemento</th>
+                <th data-i18n="supplement.fields.productbrand">Marca do Produto</th>
+                <th data-i18n="supplement.fields.expectedconsumption">Consumo Esperado</th>
+                <th data-i18n="supplement.fields.expectedweightgain">Peso Esperado</th>
+  				<th data-i18n="supplement.fields.weight">Peso</th>
+  				<th data-i18n="supplement.fields.averagecost">Custo Médio</th>
+  				<th data-i18n="supplement.fields.ingredients">Ingredientes</th>
+                <th id="edit" data-i18n="entry.options">Opções</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="multiselect-modal">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" data-i18n="ingredient.title">Ingredientes</h4>
+          </div>
+
+          <div class="modal-body multiselect" id="ingredient">
+            <table data-name="ingredient" id="multiselect-table" class="display">
+              <thead></thead>
+            </table>
+          </div>
+
+          <div class="modal-footer modal-center">
+            <button type="button" class="btn btn-default" id="btn-cancel">
+              <i class="material-icons">close</i>
+              <span data-i18n="button.cancel">Cancelar</span>
+            </button>
+            <button type="button" data-dismiss="modal" class="btn btn-primary" id="btn-confirm">
+              <i class="material-icons">check</i>
+              <span data-i18n="button.confirm">Confirmar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/entrySupplement.js"></script>
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        
+        <script src="js/bundle-vendor.js"></script>
+		
+		<!--
+		<script src="../app/js/lib/bootstrapOld.min.js"></script>
+		<script src="../app/js/lib/datatables_new.js"></script>
+		
+		<script src="../app/js/lib/dataTables.buttons.min.js"></script> -->
+		
+
+        <script src="js/bundle-util.js"></script>
+    </body>
+</html>

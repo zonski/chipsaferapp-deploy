@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title data-i18n="home.title">Home</title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">	
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">		
+		
+		<link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css"> 
+		
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+
+        <div class="container white">
+            <button id="back-taskEvent-btn" class="btn btn-primary">
+                <span class="icon icon-chevron-left"></span>
+                <span data-i18n="button.back">Voltar</span>
+            </button>
+
+            <div id="taskEvent">
+                <div class="taskEventGroup">
+                    <h2 id="title-taskEvent"></h2>
+
+                    <div id="duration"></div>
+
+                    <div id="description"></div>
+
+                    <input type="hidden" id="animalId-inputTypeAnimal">
+                    <div id="formSpecificEventBase" hidden>
+                        <div>
+                            <label id="inputType" data-inputType="0"></label>
+                        </div>
+
+                        <div>
+                            <label id="inputName"></label>
+                        </div>
+
+                        <div id="formWeighing" hidden>
+                            <div id="formAnimal">
+                                <label data-i18n="event.fields.animal">Animal</label>
+                                <input class="form-control field sub" name="animal" data-reference="animal">
+                                <input type="hidden" class="form-control field sub autocomplete" id="animal" data-sub="id" disabled>
+                            </div>
+
+                            <div class="row weight">
+                                <div class="col-md-8">
+                                    <label data-i18n="event.fields.weight">Peso</label>
+                                    <input type="text" class="form-control field number required" id="weight" name="weight" maxlength="10">
+                                    <span class="measure">kg</span>
+                                </div>
+
+                                <div class="col-md-4 pull-right">
+                                    <button class="btn btn-success entry-action entry-btn pull-right" data-action="submit">
+                                        <span class="glyphicon glyphicon-floppy-save"></span>
+                                        <span data-i18n="entry.save">Salvar</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkbox checkbox-success">
+                        <input type="checkbox" name="concluded" id="status" />
+                        <label for="status" data-i18n="taskEventView.finish">Concluído</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/taskEventView.js"></script>
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        
+        <script src="js/bundle-vendor.js"></script>
+		
+		<!--
+		<script src="../app/js/lib/bootstrapOld.min.js"></script>
+		<script src="../app/js/lib/datatables_new.js"></script>
+		
+		<script src="../app/js/lib/dataTables.buttons.min.js"></script> -->
+		
+
+        <script src="js/bundle-util.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1132 @@
+{
+    "sEmptyTable": "No record found",
+    "sInfo": "Displaying from _START_ to _END_ of _TOTAL_ record(s)",
+    "sInfoEmpty": "No record found",
+    "sInfoFiltered": "",
+    "sInfoPostFix": "",
+    "sInfoThousands": ".",
+    "sLengthMenu": "_MENU_ per page",
+    "sLoadingRecords": "Loading...",
+    "sProcessing": "Processing...",
+    "sZeroRecords": "",
+    "sSearch": "Search: ",
+    "oPaginate": {
+        "sNext": ">",
+        "sPrevious": "<",
+        "sFirst": "First",
+        "sLast": "Last"
+    },
+	
+    "oAria": {
+        "sSortAscending": ": Sort Columns Ascending",
+        "sSortDescending": ": Sort Columns Descending"
+    },
+	
+	"today": "today",
+	"month": "month",
+	"week":  "week",
+	"day":   "day",	
+	
+	"select":{				
+		"noneSelected": "No {{entry}} selected",
+		"notSelected": "Not Selected",
+		"nSelected": " {{entry}} selected",
+		"values":{
+			"all": "All",
+			"both": "Both",
+			"default": "Select...",
+			"none": "None",
+			"period":{
+				"all": "All Period",
+				"currently": "Currently",
+				"datesBetween": "Dates Between..."
+			}
+		}
+	},
+
+    "datepicker": {
+        "closeText": "Close",
+        "prevText": "&#x3c;Previous",
+        "nextText": "Next&#x3e;",
+        "currentText": "Today",
+        "monthNames": {
+            "january": "January",
+            "february": "February",
+            "march": "March",
+            "april": "April",
+            "may": "May",
+            "june": "June",
+            "july": "July",
+            "august": "August",
+            "september": "September",
+            "october": "October",
+            "november": "November",
+            "december": "December"
+        },
+        "monthNamesShort": {
+            "january": "Jan",
+            "february": "Feb",
+            "march": "Mar",
+            "april": "Apr",
+            "may": "May",
+            "june": "June",
+            "july": "July",
+            "august": "Aug",
+            "september": "Sept",
+            "october": "Oct",
+            "november": "Nov",
+            "december": "Dec"
+        },
+        "dayNames": {
+            "sunday": "Sunday",
+            "monday": "Monday",
+            "tuesday": "Tuesday",
+            "wednesday": "Wednesday",
+            "thursday": "Thursday",
+            "friday": "Friday",
+            "saturday": "Saturday"
+        },
+        "dayNamesShort": {
+            "sunday": "Su",
+            "monday": "Mo",
+            "tuesday": "Tu",
+            "wednesday": "We",
+            "thursday": "Th",
+            "friday": "Fr",
+            "saturday": "Sa"
+        },
+        "dayNamesMin": {
+            "sunday": "Sun",
+            "monday": "Mon",
+            "tuesday": "Tue",
+            "wednesday": "Wed",
+            "thursday": "Thu",
+            "friday": "Fri",
+            "saturday": "Sat"
+        },
+        "weekHeader": "Sm",
+        "dateFormat": "mm/dd/yy"
+    },
+
+    "alert": {
+        "title": "Alert",
+        "modal": {
+            "title": "Alerts",
+            "time": "Time",
+            "message": "Message",
+            "empty": "There are no alerts for this property."
+        }
+    },
+
+    "password": {
+        "title": "Password",
+        "modal": {
+            "title": "Password",
+            "notequal": "Passwords don't match.",
+            "empty": "The password cannot be empty."
+        }
+    },
+
+    "button": {
+        "back": "Back",
+        "cancel": "Cancel",
+        "save": "Save",
+        "close": "Close",
+        "filter": "Filter",
+		"search": "Search",
+        "confirm": "Confirm",
+        "select": "Select",
+        "clear": "Clear",
+		"chart": "Chart",
+		"download": "Download",
+		"showHideColumns": "Show/Hide \nColumns"
+    },
+	
+    "termsConditions":{
+		"title": "Terms and Conditions",
+		"confirmText": "I confirm that the above terms and conditions have been read and understood by me and I agree to abide by them.",
+        "acceptButton":"Go to the Home Page"
+    },
+	
+    "login": {
+        "title": "Log in",
+        "username": "User",
+        "password": "Password",
+        "button": "Enter",
+        "fieldsError": "The fields can not be blank.",
+        "recoverypwd": "Recover your password",
+        "recoverypwdbck":"Back to login",
+        "recoverypwdbtn":"Send",
+        "recoverypwdemail404":"E-mail not found",
+        "recoverypwdsuccess":"A new password has been sent to your email",
+        "recoverypwdEmlErr":"E-mail invalid"
+    },
+	
+    "home-map": {
+        "title": "Home",
+        "overlay-bar":{
+            "title":"Overlay Bar",
+			"animals": "Animals",
+			"area": "Area",
+			"property": "Property",
+			"gateway": "Gateway",
+            "tooltip":"Show/Hide Layer"
+        }
+	},
+	
+	"menu": {
+		"settings": "Settings",
+		"users": "Users",
+		"logout": "Logout",
+		"search": "Search...",
+		"propertyTop": "(Change)",
+		"setup": {
+			"title":"Settings",
+			"user-menu":"My Data",
+			"user-list-menu":"Registered users",
+			"terms-conditions":"Terms and Conditions",
+			"language-menu":"Language",
+			"change-pwd-menu":"Change my password"
+		},
+		"home": {
+			"title": "Home"
+		},	
+		"calendar": {
+			"title": "Calendar"
+		},
+		"dashboard": {
+			"title": "Dashboard",
+			"calendar": "View Calendar",
+			"newEventType": "Event Type",
+			"taskEvent": "Tasks",
+			"event": "Events",
+			"task": "View Tasks"
+		},
+		"animals": {
+		  "title": "Animal",
+		  "animal": "Animals",
+		  "subspecie": "Breeds",
+		  "species": "Species",
+		  "classificationType": "Classification types",
+		  "animalStatus": "Animal Status",
+		  "pelage": "Pelages",
+		  "lot": "Lots",
+		  "device": "Devices",
+		  "trajectoryAnimal": "Animal Trajectory"
+		},
+		"health": {
+			"title": "Health",
+			"drugClassification": "Drugs Classification",
+			"drug": "Drugs"
+		},
+		"area": {
+			"title": "Areas",
+			"area": "Pastures and Subareas",
+			"gateway": "Gateway",
+			"resourceModel": "Pasture Resources",
+			"resource": "Associate Resources to Pasture"	  
+		},
+		"property": {
+			"title": "Property",
+			"map": "View on Map",
+			"new": "Properties"
+		},
+		"nutrition":{
+			"title": "Nutrition",
+			"ingredient": "Ingredients",
+			"supplement": "Supplements"
+		},
+		"management":{
+			"title": "Manage",
+			"customerSupplier": "Customers and Suppliers",
+			"associateAnimalsLot": "Associate Animals with Lot",
+            "weighingAnimals": "Weighing Animals",
+            "weighingLot": "Weighing Lots",
+			"transactions": "Animal Trading"
+		},
+		"chart": {
+			"title": "Chart",
+			"animal": "Animals",
+			"animalMovement": "Animal Movement",
+			"animalWeighing": "Animal Weighing"
+		},
+		"report": {
+			"title": "Reports",
+			"animal": "Animals",
+			"deviceLastData": "Latest Data Received per Device",
+			"animalInLot": "Animals in Lot",
+			"animalStatusHistory": "Animal Status History",
+			"weighing": "Weighing"
+		},
+		"task":{
+			"title": "Tasks"
+		},
+		"informations":{
+			"title": "Informations"
+		}
+	},
+
+    "options": {
+        "yes": "Yes",
+        "no": "No",
+        "active": "Active",
+        "inactive": "Inactive",
+		"open": "Open",
+		"done": "Done"
+    },
+
+    "notify": {
+        "error": "Error",
+        "warning": "Warning",
+        "success":  "Success",
+        "ok": "OK",
+        "yes": "Yes",
+        "no": "No"
+    },
+
+    "error": {
+        "ajaxError": "An unexpected error ocurred. Please try again later.",
+        "requiredError": "Required field not filled.",
+        "requiredDateError": "Required field invalid or not filled.",
+        "numberError": "Invalid value in numerical field.",
+        "dateError": "The year can not be before 1753 or after 9999.",
+        "dateFormatError": "The date is in an invalid format.",
+        "coordError": "Invalid value in a coordinate field.",
+        "unauthorized": "Please repeat your login.",
+        "timeout": "Request timed out. Please try again later.",
+        "timeError": "The duration can not be zero.",
+        "autoCompleteError": "Select one option.",
+        "noConnection": "Error connecting to server, please try again."
+    },
+
+    "propertyMap": {
+        "title": "Map"
+    },
+
+    "home": {
+        "title": "Chipsafer",
+        "news": "News",
+        "newsSite": "Drovers",
+        "weather": "Weather",
+        "dollar": "Dollar",
+        "purchase": "Purchase",
+        "sale": "Sale"
+    },
+
+	"entry": {
+		"save": "Save",
+        "cancel": "Cancel",
+        "edit": "Edit",
+		"options": "Options",
+        "postMsg": "{{entry}} created with success.",
+        "putMsg": "{{entry}} changed with success.",
+        "deleteConfirm": "Are you sure that you want to delete this {{entry}}?",
+        "deleteMsg": "{{entry}} deleted with success.",
+        "search": "Search",
+        "updateConfirm": "Do you want to change the {{entry}}?",
+        "autoCompletePlaceholder": "Type the {{placeholder}}",
+        "saveConfirm": "Are you sure that you want to save this {{entry}}?",
+		"associateToLot": "Do you really want to associate this animal with the Lot?",
+		"desassociateFromLot": "Do you really want to disassociate this animal from the Lot?",
+		"finishTask": "Do you really want to finish this task?"
+    },
+   
+   "propertyMenu": {
+        "title": "Choose a Property",
+        "notify": {
+            "noneProperty": "The system does not have any property."
+        }
+    },
+
+	"animal": {
+		"name": "Animal(s)",
+        "title": "Animals",
+        "add": "Add Animal",
+        "addGroup": "Add Multiple Animals",        
+        "availableIn": "Animal(s) available in ",
+        "groupName": "Animal Groups",
+		"columns": "Columns ({{cols}}/11)",
+		"fields": {
+			"code": "Code",
+			"nickName": "Name",
+			"deviceCode": "Device",
+			"noDeviceAssociated": "No Device Associated",
+			"mother": "Mother",
+			"father": "Father",
+			"dateBirth": "Date of Birth",
+			"dateWeaning": "Weaning Date",
+			"dateCastrate": "Castration Date",
+			"gender": "Gender",
+			"classification": "Class",
+			"genderMale": "Male",
+			"genderFemale": "Female",
+			"genderAll": "All animals",
+			"subspecies": "Breed",
+			"property": "Property",
+			"animalStatus": "Status",
+			"pelage": "Pelage",
+			"lot": "Lot",
+			"quantity": "Amount",
+			"weight": "Current Weight",
+			"origin": "Origin of the Animal",		
+			"originOptions":{
+				"bornProperty": "Born in the Property",
+				"acquired": "Acquired from Other Property"
+			}
+		}
+	},
+
+    "animalStatus": {
+        "title": "Animal Status",
+        "name": "Animal Status",
+        "add": "Add Animal Status",
+        "fields": {
+            "description": "Description",
+            "shortName": "Status",
+            "active": "Active"
+        }
+    },
+	
+	"area": {
+		"name": "Areas",
+		"title": "Pastures and Subareas",
+		"add": "Add Pasture or Subarea",
+		"emptyError": "This subarea has no geographic coordinates.",
+		"selectEmptyError": "Select one subarea.",
+		"fields": {
+			"name": "Name",
+			"levelBase": "Level Base",
+			"areaFather": "Main Area",
+			"property": "Property",
+			"georef": "Location"
+		},
+		"tooltip": "Where the area will be placed."
+	},
+	
+	"associateLot":{
+		"title": "Associate Animals with Lot",
+		"animalsToLot":{
+			"title": "Associate Animals with Lot",
+			"available": "Animal(s) Available"
+		},
+		"lotToLot":{
+			"title": "Moving Animals to {{lot}}",
+			"originLot": "Origin Lot",
+			"animalsInLot": "Animals in Lot"
+		}		
+	},
+	
+	
+	"buyAnimals": {
+        "name": "Purchase",
+        "title": "Purchase of Animals",
+        "date": "Purchase Date",
+        "supplier": "Supplier",
+        "availableList": "Animals available for purchase",
+		"buyList": "Animals included for purchase",
+        "enrolledAnimal": "Animal has already been included in the purchase",
+        "save": "Register purchase",
+        "saveEdit" : "Update Purchase",
+        "saveConfirm": "Confirm purchase?",
+        "buyListEmpty": "No animals were included in the purchase!",
+        "fields":{
+            "value":"Purchase Value"
+        }
+    },
+
+	"calendar": {
+        "title": "Calendar",
+        "event": "Calendar",
+        "taskEvent": "Task",
+        "dontHaveTask": "Do not have tasks for this event."
+    },
+	
+	"chart": {
+        "animalMovement": {
+            "title": "Animal Moviment",
+            "from": "From",
+            "to": "To"
+        },
+		"animalWeighing": {
+            "title": "Animal Weighing"
+        },
+        "animal": {
+            "title": "Animal Chart",
+            "noneCoordinates": "This animal doesn't have coordinate"
+        }
+    },
+	
+	"classificationType": {
+        "title": "Classification Types",
+        "name": "Classification Type",
+        "add": "Add Classification Type",
+        "fields": {
+            "active": "Active",
+            "name": "Name"
+        }
+    },
+	
+	"customerSupplier":{
+		"name": "Customers and Suppliers",
+        "title": "Customers and Suppliers",
+        "add": "Add Customer/Supplier",		
+		"fields": {
+			"name": "Name",
+			"email": "E-mail",
+            "Street": "Street",
+            "Number": "Number",
+            "Complement": "Complement",
+            "Country": "Country",
+            "State": "State",
+            "City": "City",
+			"businessType": "Business Type",
+			"classification": "Class.",
+			"classoption":{
+				"customer": "Customer",
+				"supplier": "Supplier",
+				"customerAndSuplier": "Customer and Supplier"
+			}
+		}		
+	},
+			
+    "dashboard": {
+        "titleAnimalsBox": "Animals ",
+		"tab":{
+			"animalsProperty": "Animals on the Property",
+			"animalWeighing": "Weighing",
+			"animalTransactions": "Animal Transactions",
+			"animalMonitoring": "Animal Monitoring"
+		},
+		"customersChart":"Main Customers",
+		"suppliersChart":"Main Suppliers",
+		"averageWeightChart":{ 
+            "title": "Average Bovine Weight",
+            "chartLegend": "Average Weight"
+        },
+		"approximateDistanceChart":{ 
+			"title": "Total Distance Traveled per Hour",
+			"title2": "Distance Traveled During Monitoring",
+			"chartLegend": "Animal with Device: {{animal}}",
+			"distanceInMeters": "Distance (in meters)",
+			"distance": "Distance"
+		},
+		"animalsTradedChart":{ 
+			"title": "Animals Traded",
+			"chartLegend": "Animals traded between {{start}} and {{end}}",
+			"purchased": "Purchased",
+			"sold": "Sold",
+			"slaughter": "Sold Slaughterhouse"
+		},
+		"animalsTradingValueChart":{
+			"title": "Animal Trading Values",
+			"chartLegend": "Values traded between {{start}} and {{end}}"
+		},		
+		"animalsAge": {
+            "title": "Age of animals",
+            "months": "months",
+			"above": "Above",
+			"to": "to"
+		},
+		"animalWeightsChart":{
+			"title": "Registered Weights of an Animal in the Last 12 Months",
+            "info": "Only animals with at least 2 weighings in the last 12 months."
+		},
+		"animalLostGainWeightsChart":{
+            "title": "Gain and Loss of Weight of an Animal in the Last 12 Months",
+            "info": "Only animals with at least 2 weighings in the last 12 months."
+        },
+		"birthDeathChart":{
+			"title": "Birth and Death",
+			"births": "Births",
+			"deaths": "Deaths"	
+		},
+		"cowStatusChart":{
+			"title": "Cows Status",
+			"dry": "Dry",
+			"lactating": "Lactating",
+			"pregnant": "Pregnant"
+		},
+		"numberWeightsChart":{
+            "title": "Number of Weights Performed",
+			"weighing": "Weighings"
+        },
+		"axis":{
+			"animalsAmount": "Animals (Amount)",
+			"periodMonth": "Period (Month)",
+			"periodMonthAndDay": "Period (Month and Day)",
+			"periodMonthAndYear": "Period (Month and Year)",
+			"amountOfWeighing": "Amount of Weighing",
+			"value": "Value ({{entry}})",
+			"distanceTraveled": "Distance Traveled (in meters)",
+			"timeDay": "Time of Day",
+			"weightInKg": "Weight (Kg)",
+			"weightVariation": "Weight Variation (Kg)"
+		},
+		"options":{
+			"last3months": "Last 3 months",
+			"last6months": "Last 6 months",
+			"last12months": "Last 12 months"
+		}
+    },
+	
+	"device": {
+		"name": "Device(s)",
+        "title": "Devices",
+        "add": "Add Device",
+		"fields": {
+			"code": "Code",
+			"model": "Model",
+			"alerts": "Enable/Disable Alerts",
+			"batteryAlert": "Battery Alert",
+			"animalOutAreaAlert": "Animal Out Area Alert",
+			"animalOutPropertyAlert": "Animal Out Property Alert",
+			"anomalyOnDeviceAlert": "Anomaly On Device Alert",
+			"deviceResetAlert": "Device Reset Alert",
+			"fallenDeviceAlert": "Fallen Device Alert"
+		}
+	},
+
+    "drugClassification": {
+        "title": "Drugs Classification",
+        "name": "Drugs Classification",
+        "add": "Add Drugs Classification",
+        "fields": {
+            "name": "Name",
+            "active": "Active"
+        }
+    },
+
+    "drug": {
+        "title": "Drugs",
+        "name": "Drug",
+        "add": "Add Drugs",
+        "fields": {
+            "active": "Active",
+            "shortage": "Shortage (Slaughter)",
+			"shortageMonth": "Shortage of Slaughter (months)",
+            "name": "Name",
+            "dosage": "Dosage",
+            "immunization": "Immunization",
+            "drugsClassification": "Drugs Classification",
+            "applicationDose": "Application Doses"
+        },
+        "dosageDays": "days",
+        "immunizationMonths": "months"
+    },
+	
+	"event": {
+		"name": "Event (everyday)",
+        "title": "Event",
+		"fields": {
+			"eventType": "Event type",
+			"description": "Description",
+			"date": "Date",
+			"startDate": "Initial date",
+			"endDate": "Final date",
+			"period": "Period",
+			"inputType": "Collection type",
+			"byanimal": "By animal",
+			"bylot": "By lot",
+			"animal": "Animal",
+			"lot": "Lot",
+			"weight": "Weight",
+			"drug": "Drug",
+			"supplement": "Supplement"
+		},
+        "buttons": {
+            "delete": "Delete from this day",
+            "deleteAll": "Delete Event"
+        }
+    },
+
+    "eventDay": {
+        "name": "Event (only this day)"
+    },
+	
+	"eventType": {
+        "name": "Event Type",
+        "title": "Event Type",
+        "add": "Add Event Type",
+        "fields": {
+            "name": "Name",
+            "eventTypeFather": "Event Type Father"
+        }
+    },
+	
+	"gateway": {
+        "name": "Gateways",
+        "title": "Gateways",
+        "add": "Add Gateway",
+		"marker":{
+			"add": "Add Marker",
+			"remove":"Remove Marker"
+		},
+		"fields": {
+			"code": "Code",
+			"description": "Description",
+			"coordinates": "Coordinates",
+			"altitude": "Altitude",
+			"alerts": "Enable/Disable Alerts",
+			"statusAlert": "Status Alert"
+		}
+    },
+	
+	"georef": {
+		"y": "Latitude",
+        "x": "Longitude",
+        "add": "Add coordinate...",
+        "clear": "Clear",
+        "confirm": "Confirm",
+        "maps": "Maps",
+        "map": "Map",
+        "coordinates": "Coordinates"
+    },	
+	
+	"ingredient": {
+		"title": "Ingredients",
+		"name": "Ingredient",
+		"add": "Add Ingredient",
+		"fields": {
+			"name": "Name",
+			"active": "Active"
+		},
+		"percentageError": "The sum must be 100%"
+	},
+	
+	"knowlodge":{
+		"title": "Concentration Areas"	
+	},	
+	
+	"lot": {
+        "title": "Lots",
+        "name": "Lot",
+        "add": "Add Lot",
+        "fields": {
+            "name": "Name",
+            "animal": "Animals",
+            "quantity": "Amount",
+			"pasture": "Pasture"
+        },
+        "quantity": "This lot has {{ qty }} animals",
+        "lotManager": "Manage Lots",
+        "animalsInLot": "Animal(s) in lot {{ name }}",
+        "animalsInSpecificLot": "Animal(s) in lot",
+        "enrolledAnimal": "Animal has already been included in the lot"
+    },
+	
+	
+	"notificationWindow": {
+		"title": "Notifications",
+		"readMore": "Read More",
+		"seeMap": "See on Map",	
+		"animal": "Animal",
+		"battery": "Battery",
+		"temperature": "Temperature",
+		"humidity": "Humidity",
+		"device-code": "Device",
+		"message": "Message",
+		"datetime": "Date and Time"
+	},
+	
+	
+	"pelage": {
+        "title": "Pelages",
+        "name": "Pelage",
+        "add": "Add Pelage",
+        "fields": {
+            "name": "Name"
+        }
+    },
+	
+	"property": {
+		"name": "Property",
+        "title": "Properties",
+        "add": "Add Property",
+        "emptyError": "This property has no geographic coordinates.",
+        "fields": {
+            "name": "Name",
+            "totalArea": "Total Area",
+			"hectares": "Hectares",
+            "cnpj": "EIN",
+            "razaoSocial": "Company Name",
+            "inscricaoEstadual": "State registration",
+            "ownerName": "Name of the Owner",
+            "georef": "Location",
+            "email": "Alert E-mail",
+            "Street": "Address",
+            "Number": "Number",
+            "Complement": "Complement",
+            "Country": "Country",
+            "State": "State",
+            "City": "City",
+            "Timezone": "Timezone"
+        }
+    },
+
+	"report": {
+		"animal": {
+			"title": "Animals Report",
+            "fields": {
+				"subSpecies": "Breed",
+                "pelage": "Pelage",
+                "lot": "Lot",
+                "gender": "Gender",
+                "dateBirthStart": "Date of Birth (From)",
+                "dateBirthEnd": "Date of Birth (To)",
+                "dateWeaningStart": "Weaning Date (From)",
+                "dateWeaningEnd": "Weaning Date (To)",
+                "moviment": "Moviment",
+                "classification": "Classification",
+                "classificationType": "Classification Type",
+                "species": "Specie",
+				"weighing": "Weighing",
+                "deviceoption":{
+					"withDevice": "Animals with Devices",
+					"withoutDevice": "Animals without Devices"
+				}
+			}
+		},
+		"historyAnimalStatus": {
+			"title": "Animal Status History Report",
+			"fields": {
+				"status": "Animal Status",
+				"statusDate": "Status Date",
+				"startDate": "Start Date (From)",
+				"endDate": "End Date (To)",
+				"isValid": "Valid",
+				"deletionDate": "Deletion Date",
+				"showOnlyValidStatus": "Show only valid statuses",
+				"statusPeriod": "Status Period"
+			}
+		},
+		"device": {
+			"title": "Devices Report",
+			"lastData": {
+				"title": "Latest Data Received by Device Report",
+				"animal": "Animal",
+				"batteryReceived": "Battery",
+				"latitudeReceived": "Latitude",
+				"longitudeReceived": "Longitude",
+				"dateReceived": "Received in...",
+				"timeWithoutData": "Time without Data",
+				"highlightLines": "Highlight Lines in Report",
+				"fields":{
+					"periodDataReceived": "Period Data Received",
+					"startDate": "Start Date (From)",
+					"endDate": "End Date (To)",
+					"inactiveDevices": "Inactive Devices from:",
+					"batteryVoltage": "Battery less than:",
+					"humidityValue": "Humidity equal to:",
+					"days": "days"
+				}
+			}
+		},
+		"drug": {
+			"title": "Drugs Report",
+			"fields": {
+				"drug": "Drug"
+			}
+		},
+		"lot":{
+			"title": "Animal in Lot Report",
+			"fields": {
+				"entryDate": "Entry Date",
+				"departureDate": "Departure Date",
+				"startDate": "Start Date (From)",
+				"endDate": "End Date (To)",
+				"currentlyLot": "Currently in Lot",
+				"lotsPeriod": "Lots Period"
+			}
+		},
+		"transaction":{
+			"title": "Animal Transactions Report",
+			"animalsTraded": "Animals Traded",
+			"fields": {
+				"endDate": "End Date (To)",	
+				"startDate": "Start Date (From)",
+				"transactionPeriod": "Trading Period",
+				"tradingType": "Trading Type"
+			}
+		},
+		"weighing":{
+			"title": "Weighing Report",
+			"chart":{
+				"title": "History of Weighing Over Time",
+				"weightKG": "Weight (KG)"
+			},
+			"fields": {
+				"lot": "Lot",
+				"endDate": "End Date (To)",				
+				"startDate": "Start Date (From)",			
+				"weight": "Weight",
+				"weighingDate": "Date of Weighing",
+				"weighingPeriod": "Weighing Period",
+				"weighingType": "Type of Weighing"
+			},
+			"tooltip":{
+				"animal": "Only animals with recorded weights",
+				"lot": "Only lots with recorded weights"
+			}
+		}
+	},
+	
+	"resourceArea": {
+		"name": "Associate Resource to Pasture",
+		"title": "Associate Resource to Pasture",
+		"associate": "Associate Resource",
+		"fields": {
+			"code": "Code",
+			"area": "Area",
+			"property": "Property",
+			"resourceModel": "Pasture Resource",
+			"georef": "Location"
+		},
+		"error": {
+			"invalidPoint": "It is not allowed put one point out of the area",
+			"minCoordinates": "Place the minimum of coordinates on the map."
+		}
+	},
+	
+	"resource": {
+		"name": "Pasture Resources",
+        "title": "Pasture Resources",
+        "addtitle": "Add Pasture Resource",
+		"add": "Add Resource",
+        "fields": {
+            "name": "Name",
+            "width": "Width",
+            "height": "Height",
+            "altitude": "Altitude",
+            "depth": "Depth",
+            "capacity": "Capacity",
+            "resourceType": "Resource Type"
+        }
+    },
+	
+	"saleAnimals": {
+        "name": "Sale",
+        "title": "Sale of Animals",
+        "date": "Sale Date",
+        "client": "Customer",
+        "currency": "Currency",
+        "availableList": "Animals available for sale",
+        "enrolledAnimal": "Animal has already been included in the sale",
+        "saleList": "Animals included for sale",
+        "save": "Register sale",
+        "saveEdit" : "Update Sale",
+        "saveConfirm": "Confirm sale?",
+        "saveConfirmUpdate": "Confirm update?",
+        "returnTransactions": "Return to listing",
+        "saleListEmpty": "No animals were included in the sale!",
+        "fields":{
+            "nickName": "Name",
+            "value": "Sell Value"            
+        }
+    },
+	
+	"slaughterSale": {
+        "name": "Sale",
+        "title": "Sale of Animals by Slaughter",
+        "slaughterhouse": "Slaughterhouse",		
+        "liveWeight": "Total Living Weight",
+        "carcassYield": "Carcass Yield",
+        "fields":{
+			"weight": "Weight",
+            "totalSale": "Total Sale",
+            "totalLiveWeight": "Total Live Weight",
+            "liveWeightAverage": "Live Weight Average",
+            "deadWeightAverage": "Dead Weight Average"                        
+        }
+    },
+	
+	"species": {
+		"title": "Species",
+        "name": "Specie",
+        "add": "Add Specie",
+        "fields": {
+            "name": "Name",
+            "classificationType": "Classification Type",
+            "active": "Active"
+        }
+    },
+	
+	"subspecies": {
+		"title": "Breeds",
+        "name": "Breed",
+        "add": "Add Breed",
+        "fields": {
+            "name": "Name",
+            "species": "Specie",
+            "active": "Active",
+            "mocho": "Polled",
+            "favorite": "Favorite",
+            "pelage": "Pelage"
+        }
+    },
+
+	"supplement": {
+		"title": "Supplements",
+		"name": "Supplement",
+		"add": "Add Supplement",
+		"fields": {
+			"name": "Name",
+			"supplementtype": "Supplement Type",
+			"productbrand": "Product Brand",
+			"expectedconsumption": "Expected Consumption",
+			"expectedweightgain": "Expected Weight Gain",
+			"weight": "Weight",
+			"averagecost": "Average Cost",
+			"ingredients": "Ingredients"
+		},
+		"measure": {
+			"ganimalday": "g/animal/day",
+			"kg": "kg",
+			"money": "US$"
+		}
+	},
+	
+	"tasks":{
+		"event": "Event",
+		"taskEvent": "Task",
+		"taskDate": "Task Date",
+		"time": "Time",
+		"finishTask": "Finish Task"
+	},
+	
+	"taskEvent": {
+        "title": "Tasks",
+        "add": "Add Task",
+        "fields": {
+            "user": "User",
+            "startTime": "Start Time",
+            "endTime": "End Time",
+			"time": "Time",
+            "description": "Description",
+            "status": "Status",
+			"weight": "Weight",
+			"taskDone": "Task Done"
+        },
+        "name": "Task",
+        "deleteTaskEvent": "If you change the period your tasks will be deleted.",
+        "finish": "Finished"
+    },
+
+    "taskEventView": {
+        "title": "Tasks",
+        "finish": "Finished"
+    },
+
+	"trajectoryAnimal":{
+		"title": "Animal Trajectory",
+		"titleSmallWindow" : "Trajectory  - {{ date }}",
+		"trajectory": "Trajectory",
+		"date": "Date of Trajectory",		
+		"advanced": "Advanced",
+		"advancedSearch": "Advanced Trajectory Search",				
+		"fields": {
+			"trajectoriesPeriod": "Trajectories Period",
+			"period":{
+				"datesWithoutTimeRange": "Date range without time",
+				"datesWithTimeRange": "Date range with time",
+				"datesAndTimeRange": "Date Range and Time Range",
+				"allPeriod": "All activity period"
+			},			
+			"dateStart": "Initial Date (From)",
+			"dateEnd": "Final Date (To)",
+			"dateTimeStart": "Initial Date and Time",
+			"dateTimeEnd": "Final Date and Time",
+			"timeStart": "Initial Time",
+			"timeEnd": "Final Time"			
+		},		
+		"map":{
+			"start": "Start",
+			"end": "End",
+			"duration": "Duration",
+			"numberCoordinates": "Number of Coordinates",
+			"distance": "Approximate Distance"
+		},		
+		"format": {
+			"text": "Text Format (.txt)",
+			"pdf": "PDF Format (.pdf)",
+			"excel": "Excel Format (.xlsx)"
+		},		
+		"alert": {
+			"periodNotSelect": "The trajectories search period was not reported.",
+			"nofound" : "No trajectories were found associated with the search data.",
+			"noValidCoordinates": "The trajectory has no valid coordinates."
+		}
+	},
+	
+	"transaction": {
+        "name": "Transaction",
+        "fields":{
+            "buy": "Buy",
+            "sale": "Sale",
+            "slaughterSale": "Sale by Slaughter",
+            "date": "Date",
+            "customersupplier": "Customer/Supplier",
+            "value": "Value",
+            "type":"Type",
+            "currency":"Currency"
+        },
+        "editButton": "Edit",
+        "newSale": "New Sale",
+        "newBuy": "New Purchase",
+        "newSlaughterSale": "New Sale by Slaughter"
+    },
+	
+	"user": {
+		"name": "User",
+        "title": "Users",
+        "add": "Add User",
+        "passwordChangeSuccess": "Password updated with success.",
+        "fields": {
+            "username": "User",
+            "name": "Name",
+            "email": "Email",
+            "active": "Active",
+            "profile": "Profile",
+            "profile-select": "Select a profile --",
+			"language": "Default Language",
+            "language-select": "Select a language --",
+            "passwordcurrent": "Current Password",
+            "password": "Password",
+            "passwordconfirm": "Confirm Password",
+			"alerts": "Alerts",
+			"alertOptions":{
+				"viewNotifies": "View Alert Notifications",
+				"receiveEmail": "Receive E-mail Alerts Notifications"
+			}
+        }
+    },
+	
+	"weighing":{
+        "title": "Weighing of Animals",
+        "lotTitle": "Weighing of Lots",
+		"add": "Add Weight",	
+		"fields":{
+            "animal": "Animal",
+            "lot": "Lot",
+			"weight": "Weight",
+			"dateWeighing": "Date of Weighing"
+		}
+	},
+
+    "lotAnimals": {
+        "save": "Confirm Associations",
+        "name": "Associations"
+    },
+
+	"recoverPassword":{
+		"title": "Recover Password",
+		"send": "Send",
+		"notEqual": "Passwords aren't the same!",
+		"notActive": "This link is no longer active!",
+		"success": "Password changed successfully!",
+		"fields":{
+			"newPassword": "New Password",
+			"confirmPassword": "Confirm Password"
+		}
+	}
+	
+}

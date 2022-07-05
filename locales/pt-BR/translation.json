@@ -1,0 +1,1135 @@
+{
+    "sEmptyTable": "Nenhum registro encontrado",
+    "sInfo": "Exibindo de _START_ até _END_ de _TOTAL_ registro(s)",
+    "sInfoEmpty": "Nenhum registro encontrado",
+    "sInfoFiltered": "",
+    "sInfoPostFix": "",
+    "sInfoThousands": ".",
+    "sLengthMenu": "_MENU_ por página",
+    "sLoadingRecords": "Carregando...",
+    "sProcessing": "Processando...",
+    "sZeroRecords": "Nenhum registro encontrado",
+    "sSearch": "Buscar: ",
+    "oPaginate": {
+        "sNext": ">",
+        "sPrevious": "<",
+        "sFirst": "Primeiro",
+        "sLast": "Último"
+    },
+	
+    "oAria": {
+        "sSortAscending": ": Ordenar colunas de forma ascendente",
+        "sSortDescending": ": Ordenar colunas de forma descendente"
+    },
+	
+	"today": "hoje",
+	"month": "mês",
+	"week":  "semana",
+	"day":   "dia",	
+	
+	"select":{
+		"noneSelected": "Nenhum {{entry}} selecionado",
+		"notSelected": "Não selecionado(a)",
+		"nSelected": " {{entry}} selecionados",
+		"values":{
+			"all": "Todos",
+			"both": "Ambos",		
+			"default": "Selecione...",
+			"none": "Nenhum(a)",
+			"period":{
+				"all": "Todo o período",
+				"currently": "Atualmente",
+				"datesBetween": "Datas entre..."
+			}
+		}
+	},
+	
+    "datepicker": {
+        "closeText": "Fechar",
+        "prevText": "&#x3c;Anterior",
+        "nextText": "Pr&oacute;ximo&#x3e;",
+        "currentText": "Hoje",
+        "monthNames": {
+            "january": "Janeiro",
+            "february": "Fevereiro",
+            "march": "Mar&ccedil;o",
+            "april": "Abril",
+            "may": "Maio",
+            "june": "Junho",
+            "july": "Julho",
+            "august": "Agosto",
+            "september": "Setembro",
+            "october": "Outubro",
+            "november": "Novembro",
+            "december": "Dezembro"
+        },
+        "monthNamesShort": {
+            "january": "Jan",
+            "february": "Fev",
+            "march": "Mar",
+            "april": "Abr",
+            "may": "Mai",
+            "june": "Jun",
+            "july": "Jul",
+            "august": "Ago",
+            "september": "Set",
+            "october": "Out",
+            "november": "Nov",
+            "december": "Dez"
+        },
+        "dayNames": {
+            "sunday": "Domingo",
+            "monday": "Segunda-feira",
+            "tuesday": "Ter&ccedil;a-feira",
+            "wednesday": "Quarta-feira",
+            "thursday": "Quinta-feira",
+            "friday": "Sexta-feira",
+            "saturday": "Sábado"
+        },
+        "dayNamesShort": {
+            "sunday": "Dom",
+            "monday": "Seg",
+            "tuesday": "Ter",
+            "wednesday": "Qua",
+            "thursday": "Qui",
+            "friday": "Sex",
+            "saturday": "Sab"
+        },
+        "dayNamesMin": {
+            "sunday": "Dom",
+            "monday": "Seg",
+            "tuesday": "Ter",
+            "wednesday": "Qua",
+            "thursday": "Qui",
+            "friday": "Sex",
+            "saturday": "Sab"
+        },
+        "weekHeader": "Sm",
+        "dateFormat": "dd/mm/yy"
+    },
+
+    "alert": {
+        "title": "Alerta",
+        "modal": {
+            "title": "Alertas",
+            "time": "Horário",
+            "message": "Mensagem",
+            "empty": "Não existem alertas para essa propriedade."
+        }
+    },
+
+    "password": {
+        "title": "Senha",
+        "modal": {
+            "title": "Senha",
+            "notequal": "As senhas não correspondem.",
+            "empty": "A senha não pode estar em branco."
+        }
+    },
+
+    "button": {
+        "back": "Voltar",
+        "cancel": "Cancelar",
+        "save": "Salvar",
+        "close": "Fechar",
+        "filter": "Filtrar",
+		"search": "Buscar",
+        "confirm": "Confirmar",
+        "select": "Selecionar",
+        "clear": "Limpar",
+		"chart": "Gráfico",
+		"download": "Download",
+		"showHideColumns": "Mostrar/Ocultar \nColunas"
+    },
+	
+    "termsConditions":{
+        "title": "Termos e Condições",
+		"confirmText": "Confirmo que os termos e condições acima foram lidos e compreendidos por mim e concordo em obedecê-los.",
+        "acceptButton": "Ir para a Página Inicial"
+    },
+	
+    "login": {
+        "title": "Entrar no sistema",
+        "username": "Usuário",
+        "password": "Senha",
+        "button": "Entrar",
+        "fieldsError": "Os campos não podem ficar em branco.",
+        "recoverypwd": "Recupere sua senha",
+        "recoverypwdbck":"Voltar",
+        "recoverypwdbtn":"Enviar",
+        "recoverypwdemail404":"E-mail não encontrado",
+        "recoverypwdsuccess":"Uma nova senha foi enviado ao seu e-mail",
+        "recoverypwdEmlErr":"E-mail inválido"
+    },
+	
+	"home-map": {
+		"title": "Home",
+		"overlay-bar":{
+			"title":"Camadas",
+			"animals": "Animais",
+			"area": "Área",
+            "property": "Propriedade",
+            "gateway": "Gateway",
+			"tooltip":"Mostrar/Esconder camada"
+		}
+	},
+	
+    "menu": {
+        "settings": "Configurações",
+        "users": "Usuários",
+		"changePassword": "Mudar Senha",
+        "logout": "Sair",
+        "search": "Buscar...",
+        "setup": {
+            "title":"Configurações",
+            "user-menu":"Meus Dados",
+            "user-list-menu":"Usuários Cadastrados",
+            "terms-conditions":"Termos e condições",
+            "language-menu":"Idioma",
+            "change-pwd-menu":"Alterar senha"
+        },
+        "propertyTop": "(Alterar)",
+
+        "home": {
+            "title": "Home"
+        },		
+		"calendar": {
+            "title": "Calendário"
+        },	
+        "dashboard": {
+            "title": "Dashboard",
+            "calendar": "Visualizar Calendário",
+            "newEventType": "Tipos de Evento",
+            "taskEvent": "Tarefas",
+            "event": "Eventos",
+            "task": "Visualizar Tarefas"
+        },
+        "animals": {
+            "title": "Animal",
+            "animal": "Animais",
+            "subspecie": "Raças",
+            "species": "Espécies",
+            "classificationType": "Tipos de Classificação",
+            "animalStatus": "Status do Animal",
+            "pelage": "Pelagens",
+            "lot": "Lotes",
+			"device": "Dispositivos",
+			"trajectoryAnimal": "Trajetória Animal"
+        },
+        "health": {
+            "title": "Sanidade",
+            "drugClassification": "Class. de Medicamentos",
+            "drug": "Medicamentos"
+        },
+        "area": {
+            "title": "Áreas",
+            "area": "Pastos e Subáreas",
+            "gateway": "Gateway",
+            "resourceModel": "Recursos de Pasto",
+            "resource": "Associar Recursos a Pasto"    
+        },
+        "property": {
+            "title": "Propriedade",
+            "map": "Visualizar em Mapa",
+            "new": "Propriedades"
+        },
+		"nutrition":{
+			"title": "Nutrição",
+			"ingredient" : "Ingredientes",
+			"supplement" : "Suplementos"
+		},
+		"management":{
+			"title": "Manejo",
+			"customerSupplier": "Clientes e Fornecedores",
+			"associateAnimalsLot": "Associar Animais a Lote",
+            "weighingAnimals": "Pesagem de Animais",
+            "weighingLot": "Pesagem de Lotes",
+            "transactions": "Negociação de Animais"
+		},
+        "chart": {
+            "title": "Gráfico",
+            "animal": "Animais",
+            "animalMovement": "Movimentação Animal",
+			"animalWeighing": "Pesagem Animal"
+        },
+        "report": {
+            "title": "Relatórios",
+            "animal": "Animais",
+			"deviceLastData": "Últimos Dados Recebidos por Dispositivo",
+			"animalInLot": "Animais em Lote",
+            "animalStatusHistory": "Histórico de Status Animal",
+			"weighing": "Pesagem"
+        },
+		"task":{
+			"title": "Tarefas"
+		},
+		"informations":{
+			"title": "Informações"
+		}		
+    },
+
+    "options": {
+        "yes": "Sim",
+        "no": "Não",
+        "active": "Ativo",
+        "inactive": "Inativo",
+		"open": "Abertura",
+		"done": "Concluída"
+    },
+
+    "notify": {
+        "error": "Erro",
+        "warning": "Atenção",
+        "success":  "Sucesso",
+        "ok": "OK",
+        "yes": "Sim",
+        "no": "Não"
+    },
+
+    "error": {
+        "ajaxError": "Um erro inesperado ocorreu. Por favor, tente novamente mais tarde.",
+        "requiredError": "Campo obrigatório não preenchido.",
+        "requiredDateError": "Campo obrigatório inválido ou não preenchido.",
+        "numberError": "Valor inválido num campo numérico.",
+        "dateError": "O ano não pode ser menor que 1753 ou maior que 9999.",
+        "dateFormatError": "A data está em um formato inválido.",
+        "coordError": "Valor inválido num campo de coordenada.",
+        "unauthorized": "Favor fazer login novamente.",
+        "timeout": "Tempo limite de requisição esgotado. Por favor, tente novamente mais tarde.",
+        "timeError": "A duração não pode ser zero.",
+        "autoCompleteError": "Selecione uma opção.",
+        "noConnection": "Erro na conexao com servidor, favor tentar novamente."
+    },
+
+    "propertyMap": {
+        "title": "Mapa"
+    },
+
+    "home": {
+        "title": "Chipsafer",
+        "news": "Notícias",
+        "newsSite": "Canal do Boi",
+        "weather": "Tempo",
+        "dollar": "Dólar",
+        "purchase": "Compra",
+        "sale": "Venda"
+    },
+
+    "entry": {
+        "save": "Salvar",
+        "cancel": "Cancelar",
+        "edit": "Editar",
+		"options": "Opções",
+        "postMsg": "{{entry}} criado(a)(s) com sucesso.",
+        "putMsg": "{{entry}} alterado(a) com sucesso",
+        "deleteConfirm": "Tem certeza que deseja excluir este(a) {{entry}}?",
+        "deleteMsg": "{{entry}} excluído(a) com sucesso.",
+        "search": "Buscar",
+        "updateConfirm": "Deseja alterar o(a) {{entry}}?",
+        "autoCompletePlaceholder": "Digite o(a) {{placeholder}}",
+        "saveConfirm": "Tem certeza que deseja salvar este(a) {{entry}}?",
+		"associateToLot": "Deseja mesmo associar esse animal ao Lote?",
+		"desassociateFromLot": "Deseja mesmo desassociar esse animal do Lote?",
+		"finishTask": "Deseja mesmo finalizar esta tarefa?"
+    },
+   
+    "propertyMenu": {
+        "title": "Escolha a Propriedade",
+        "notify": {
+            "noneProperty": "O sistema não possui nenhuma propriedade."
+        }
+    },
+	
+	"animal": {
+		"name": "Animal(is)",
+        "title": "Animais",
+        "add": "Adicionar Animal",
+        "addGroup": "Adicionar Vários Animais",        
+        "availableIn": "Animal(is) disponível(is) em ",
+        "groupName": "Grupo de Animais",
+		"columns": "Colunas ({{cols}}/11)",
+		"fields": {
+			"code": "Código",
+			"nickName": "Nome",
+			"deviceCode": "Dispositivo",
+			"noDeviceAssociated": "Nenhum Dispositivo Associado",
+			"mother": "Mãe",
+			"father": "Pai",
+			"dateBirth": "Data de Nascimento",
+			"dateWeaning": "Data de Desmama",
+			"dateCastrate": "Data de Castração",
+			"gender": "Sexo",
+			"classification": "Class.",
+			"genderMale": "Macho",
+            "genderFemale": "Fêmea",
+            "genderAll": "Todos os animais",
+			"subspecies": "Raça",
+			"property": "Propriedade",
+			"animalStatus": "Status Atual",
+			"pelage": "Pelagem",
+			"lot": "Lote",
+			"quantity": "Quantidade",
+			"weight": "Peso Atual",
+			"origin": "Origem do Animal",		
+			"originOptions":{
+				"bornProperty": "Nascido na Propriedade",
+				"acquired": "Adquirido de Outra Propriedade"
+			}
+		}
+	},
+
+    "animalStatus": {
+        "title": "Status do Animal",
+        "name": "Status do Animal",
+        "add": "Adicionar Status do Animal",
+        "fields": {
+            "description": "Descrição",
+            "shortName": "Status",
+            "active": "Ativo"
+        }
+    },
+	
+	"area": {
+		"name": "Pastos e Subáreas",
+		"title": "Pastos e Subáreas",
+		"add": "Adicionar Pasto ou Subárea",
+		"emptyError": "Esta subárea não possui coordenadas geográficas.",
+		"selectEmptyError": "Selecione uma subárea.",
+		"fields": {
+			"name": "Nome",
+			"levelBase": "Nível Base",
+			"areaFather": "Área Principal",
+			"property": "Propriedade",
+			"georef": "Localização"
+		},
+		"tooltip": "Onde a área estará contida"
+	},
+	
+	"associateLot":{
+		"title": "Associar Animais a Lote",
+		"animalsToLot":{
+			"title": "Associar Animais a Lote",
+			"available": "Animal(is) Disponível(is)"
+		},
+		"lotToLot":{
+			"title": "Mudança de Animais para {{lot}}",
+			"originLot": "Lote de Origem",
+			"animalsInLot": "Animal(is) no Lote"
+		}
+	},
+	
+	"buyAnimals": {
+        "name": "Compra",
+        "title": "Compra de Animais",
+        "date": "Data da Compra",
+        "supplier":"Fornecedor",
+        "availableList":"Animal(is) disponíveis(s) para compra",
+		"buyList":"Animais inclusos para compra",
+        "enrolledAnimal": "Animal já foi incluído na compra",
+        "save":"Registrar Compra",
+        "saveEdit" : "Atualizar Compra",
+        "saveConfirm": "Confirma compra?",
+        "buyListEmpty" : "Nenhum animal foi incluído na compra!",
+        "fields":{
+            "value":"Valor de Compra"
+        }
+    },
+
+	"calendar": {
+        "title": "Calendário",
+        "event": "Calendário",
+        "taskEvent": "Tarefa",
+        "dontHaveTask": "Não existem tarefas para este evento."
+    },
+	
+	"chart": {
+        "animalMovement": {
+            "title": "Movimentação Animal",
+            "from": "De",
+            "to": "Até"
+        },
+		"animalWeighing": {
+            "title": "Pesagem Animal"
+        },
+        "animal": {
+            "title": "Gráfico de Animal",
+            "noneCoordinates": "Este animal não possui coordenadas."
+        }
+    },
+	
+	"classificationType": {
+        "title": "Tipos de Classificação",
+        "name": "Tipo de Classificação",
+        "add": "Adicionar Tipo de Classificação",
+        "fields": {
+            "active": "Ativo",
+            "name": "Nome"
+        }
+    },
+	
+	"customerSupplier":{
+		"name": "Clientes e Fornecedores",
+        "title": "Clientes e Fornecedores",
+        "add": "Adicionar Cliente/Fornecedor",
+		
+		"fields": {
+			"name": "Nome",
+            "email": "E-mail",			       
+            "Street": "Endereço",
+            "Number": "Número",
+            "Complement": "Complemento",
+            "Country": "País",
+            "State": "Estado",
+            "City": "Cidade",
+			"businessType": "Tipo de Negócio",
+			"classification": "Class.",
+			"classoption":{
+				"customer": "Cliente",
+				"supplier": "Fornecedor",
+				"customerAndSuplier": "Cliente e Fornecedor"
+			}
+		}		
+	},
+	
+    "dashboard": {        
+        "titleAnimalsBox": "Animais ",
+		"tab":{
+            "animalsProperty": "Animais na Propriedade",
+            "animalWeighing": "Pesagem",
+			"animalTransactions": "Negociação de Animais",
+			"animalMonitoring": "Monitoramento Animal"
+		},
+		"customersChart":"Principais Clientes",
+        "suppliersChart":"Principais Fornecedores",        
+        "averageWeightChart":{ 
+            "title": "Média de Peso dos Bovinos",
+            "chartLegend": "Peso Médio"
+        },
+		"approximateDistanceChart":{ 
+			"title": "Distância Total Percorrida por Hora",
+			"title2": "Distância Percorrida Durante Monitoramento",
+			"chartLegend": "Animal com o Dispositivo: {{animal}}",
+			"distanceInMeters": "Distância (em metros)",
+			"distance": "Distância"
+		},
+		"animalsTradedChart":{ 
+			"title": "Animais Negociados",
+			"chartLegend": "Animais negociados entre {{start}} e {{end}}",
+			"purchased": "Comprados",
+			"sold": "Vendidos",
+			"slaughter": "Vendidos Abate"
+		},
+		"animalsTradingValueChart":{
+			"title": "Valores das Negociações",
+			"chartLegend": "Valores negociados entre {{start}} e {{end}}"
+        },
+        "animalsAge": {
+            "title": "Idade dos animais",
+            "months": "meses",
+            "above": "Acima de",
+            "to": "a"
+        },
+        "animalWeightsChart":{
+            "title": "Pesos Registrados de um Animal nos Últimos 12 Meses",
+            "info": "Somente animais com pelo menos 2 pesagens nos últimos 12 meses."
+        },	
+        "animalLostGainWeightsChart":{
+            "title": "Ganho e Perda de Peso de um Animal nos Últimos 12 Meses",
+            "info": "Somente animais com pelo menos 2 pesagens nos últimos 12 meses."
+        },
+		"birthDeathChart":{
+			"title": "Nascimentos e Mortes",
+			"births": "Nascimentos",
+			"deaths": "Mortes"		
+        },
+        "cowStatusChart":{
+			"title": "Status das Vacas",
+			"dry": "Secas",
+			"lactating": "Lactantes",
+			"pregnant": "Prenhas"
+		},
+        "numberWeightsChart":{
+            "title": "Quantidade de Pesagens Realizadas",
+            "weighing": "Pesagens"
+        },
+		"axis":{
+			"animalsAmount": "Animais (Quantidade)",
+            "periodMonth": "Período (Mês)",
+            "periodMonthAndDay": "Período (Mês e Dia)",
+			"periodMonthAndYear": "Período (Mês e Ano)",
+            "amountOfWeighing": "Quantidade de Pesagens",
+			"value": "Valor ({{entry}})",
+			"distanceTraveled": "Distância Percorrida (em metros)",
+            "timeDay": "Horário do Dia",
+            "weightInKg": "Peso (Kg)",
+            "weightVariation": "Variação de Peso (Kg)"
+		},
+		"options":{
+			"last3months": "Últimos 3 meses",
+			"last6months": "Últimos 6 meses",
+			"last12months": "Últimos 12 meses"
+		}
+    },
+	
+	"device": {
+		"name": "Dispositivo(s)",
+        "title": "Dispositivos",
+        "add": "Adicionar Dispositivo",
+
+		"fields": {
+            "code": "Código",
+            "model": "Modelo",
+			"alerts": "Ativar/Desativar Alertas",
+			"batteryAlert": "Alerta de Bateria",
+			"animalOutAreaAlert": "Alerta de Animal Fora da Área",
+			"animalOutPropertyAlert": "Alerta de Animal Fora da Propriedade",
+			"anomalyOnDeviceAlert": "Alerta de Anomalia",
+			"deviceResetAlert": "Alerta de Dispositivo Reiniciado",
+			"fallenDeviceAlert": "Alerta de Queda de Dispositivo"
+		}
+	},
+
+    "drugClassification": {
+        "title": "Classificação de Medicamentos",
+        "name": "Classificação de Medicamentos",
+        "add": "Adicionar Classificação de Medicamentos",
+        "fields": {
+            "name": "Nome",
+            "active": "Ativo"
+        }
+    },
+
+	"drug": {
+        "title": "Medicamentos",
+        "name": "Medicamento",
+        "add": "Adicionar Medicamentos",
+        "fields": {
+            "active": "Ativo",
+            "shortage": "Carência (Abate)",
+			"shortageMonth": "Carência de Abate (meses)",
+            "name": "Nome",
+            "dosage": "Dosagem",
+            "immunization": "Imunização",
+            "drugsClassification": "Class. de Medicamentos",
+            "applicationDose": "Doses Aplicadas",
+            "user": "Usuário",
+            "date": "Data"
+        },
+        "dosageDays": "dias",
+        "immunizationMonths": "meses"
+	},
+	
+	"event": {
+		"name": "Evento (todos os dias)",
+        "title": "Evento",
+		"fields": {
+			"eventType": "Tipo de Evento",
+			"description": "Descrição",
+			"date": "Data",
+			"startDate": "Data Inicial",
+			"endDate": "Data Final",
+			"period": "Período",
+			"inputType": "Tipo de Coleta",
+			"byanimal": "Por animal",
+			"bylot": "Por lote",
+			"animal": "Animal",
+			"lot": "Lote",
+			"weight": "Peso",
+			"drug": "Medicamento",
+			"supplement": "Suplemento"
+		},
+		"buttons": {
+			"delete": "Excluir deste dia",
+            "deleteAll": "Excluir evento"
+        }
+    },
+	
+	"eventDay": {
+        "name": "Evento (apenas neste dia)"
+    },
+	
+	"eventType": {
+        "name": "Tipo de Evento",
+        "title": "Tipos de Evento",
+        "add": "Adicionar Tipo de Evento",
+        "fields": {
+            "name": "Nome",
+            "eventTypeFather": "Tipo de Evento Pai"
+        }
+    },
+	
+	"gateway": {
+        "name": "Gateways",
+        "title": "Gateways",
+        "add": "Adicionar Gateway",		
+		"marker":{
+			"add": "Adicionar Marcador",
+			"remove":"Remover Marcador"
+		},
+		"fields": {
+			"code": "Código",
+			"description": "Descrição",
+			"coordinates": "Coordenadas",
+			"altitude" : "Altitude",
+			"alerts": "Ativar/Desativar Alertas",
+			"statusAlert": "Alerta de Status"
+		}
+    },
+	
+	"georef": {
+		"y": "Latitude",
+        "x": "Longitude",
+        "add": "Adicionar coordenada...",
+        "clear": "Limpar",
+        "confirm": "Confirmar",
+        "maps": "Mapas",
+        "map": "Mapa",
+        "coordinates": "Coordenadas"
+     },
+	
+	"ingredient": {
+		"title": "Ingredientes",
+		"name": "Ingrediente",
+		"add": "Adicionar Ingrediente",
+		"fields": {
+			"name": "Nome",
+			"active": "Ativo"
+		},
+		"percentageError": "A soma deve ser 100%"
+	},
+	
+	"knowlodge":{
+		"title": "Áreas de Concentração"	
+	},
+  
+	"lot": {
+        "title": "Lotes",
+        "name": "Lote",
+        "add": "Adicionar Lote",
+        "fields": {
+            "name": "Nome",
+            "animal": "Animais",
+            "quantity": "Quantidade",
+			"pasture": "Pasto"
+        },
+        "quantity": "Este lote possui {{ qty }} animal(is)",
+        "lotManager": "Gerenciar Lotes",
+        "animalsInLot": "Animal(is) no lote {{ name }}",
+        "animalsInSpecificLot": "Animal(is) no lote",		
+        "enrolledAnimal": "Animal já foi incluído no lote"
+    },
+	
+	
+	"notificationWindow": {
+		"title": "Notificações",
+		"readMore": "Leia Mais",
+        "seeMap": "Ver no Mapa",
+		"animal": "Animal",
+        "battery": "Bateria",
+        "temperature": "Temperatura",
+        "humidity": "Humidade",
+		"device-code": "Dispositivo",
+        "message": "Mensagem",
+        "datetime": "Data e Hora"
+	},
+	
+	
+	"pelage": {
+        "title": "Pelagens",
+        "name": "Pelagem",
+        "add": "Adicionar Pelagem",
+        "fields": {
+            "name": "Nome"
+        }
+    },
+	
+	"property": {
+		"name": "Propriedade",
+        "title": "Propriedades",
+        "add": "Adicionar Propriedade",
+        "emptyError": "Esta propriedade não possui coordenadas geográficas.",
+		"fields": {
+            "name": "Nome",
+            "totalArea": "Área Total",
+			"hectares": "Hectares",
+            "cnpj": "CNPJ",
+            "razaoSocial": "Razão Social",
+            "inscricaoEstadual": "Inscrição Estadual",
+            "ownerName": "Nome do Proprietário",
+            "georef": "Localização",
+            "email": "E-mail de Alerta",           
+            "Street": "Endereço",
+            "Number": "Número",
+            "Complement": "Complemento",
+            "Country": "País",
+            "State": "Estado",
+            "City": "Cidade",
+            "Timezone": "Fuso horário"
+        }
+	},
+
+	"report": {    
+		"animal": {
+			"title": "Relatório de Animais",
+			"fields": {
+				"subSpecies": "Raça",
+				"pelage": "Pelagem",
+				"lot": "Lote",
+				"gender": "Sexo",
+				"dateBirthStart": "Data de Nascimento (De)",
+				"dateBirthEnd": "Data de Nascimento (Até)",
+				"dateWeaningStart": "Data de Desmama (De)",
+				"dateWeaningEnd": "Data de Desmama (Até)",
+				"moviment": "Movimentação",
+				"classification": "Classificação",
+				"classificationType": "Tipo de Classificação",
+				"species": "Espécie",
+				"weighing": "Pesagem",
+				"deviceoption":{
+					"withDevice": "Animais com Dispositivos",
+					"withoutDevice": "Animais sem Dispositivos"
+				}			
+			}
+		},
+		"historyAnimalStatus": {
+			"title": "Relatório de Histórico de Status Animal",
+			"fields": {
+				"status": "Status do Animal",
+				"statusDate": "Data do Status",
+				"startDate": "Data Inicial (De)",
+				"endDate": "Data Final (Até)",
+				"isValid": "Válido",
+				"deletionDate": "Data de Deleção",
+				"showOnlyValidStatus": "Mostrar somente os status válidos",
+				"statusPeriod": "Período dos Status"
+			}
+		},
+		"device": {
+			"title": "Relatório de Dispositivos",
+			"lastData": {
+				"title": "Relatório de Últimos Dados Recebidos por Dispositivo",
+				"animal": "Animal",				
+				"batteryReceived": "Bateria",
+				"latitudeReceived": "Latitude",
+				"longitudeReceived": "Longitude",				
+				"dateReceived": "Recebido em...",
+				"timeWithoutData": "Tempo sem Dados",
+				"highlightLines": "Destacar Linhas no Relatório",
+				"fields": {
+					"periodDataReceived": "Periodo de Dados Recebidos",
+					"startDate": "Data Inicial (De)",
+					"endDate": "Data Final (Até)",
+					"inactiveDevices": "Dispositivos Inativos a partir de:",
+					"batteryVoltage": "Bateria abaixo de:",
+					"humidityValue": "Umidade igual a:",
+					"days": "dias"
+				}
+			}
+		},
+		"drug": {
+			"title": "Relatório de Medicamentos",
+			"fields": {
+				"drug": "Medicamento"
+			}
+		},
+		"lot":{
+			"title": "Relatório de Animais em Lote",
+			"fields": {		  
+				"entryDate": "Data de Entrada",
+			    "departureDate": "Data de Saída",
+				"startDate": "Data Inicial (De)",
+				"endDate": "Data Final (Até)",
+				"currentlyLot": "Atualmente no Lote",
+				"lotsPeriod": "Período dos Lotes"
+			}
+		},
+		"transaction":{
+			"title": "Relatório de Negociação de Animais",
+			"animalsTraded": "Animais Negociados",
+			"fields": {
+				"endDate": "Data Final (Até)",
+				"startDate": "Data Inicial (De)",
+				"transactionPeriod": "Período das Negociações",
+				"tradingType": "Tipo de Negociação"
+			}
+		},
+		"weighing":{
+			"title": "Relatório de Pesagens",
+			"chart":{
+				"title": "Histórico de Pesagem ao longo do Tempo",
+				"weightKG": "Peso (KG)"
+			},
+			"fields": {
+				"lot": "Lote",
+				"endDate": "Data Final (Até)",
+				"startDate": "Data Inicial (De)",			
+				"weight": "Peso",
+				"weighingDate": "Data da Pesagem",
+				"weighingPeriod": "Período das Pesagens",
+				"weighingType": "Tipo de Pesagem"
+			},
+			"tooltip":{
+				"animal": "Apenas os animais com pesos registrados",
+				"lot": "Apenas os lotes com pesos registrados"
+			}
+		}
+	},
+	
+	"resourceArea": {
+		"name": "Associar Recursos a Pasto",
+		"title": "Associar Recursos a Pasto",
+		"associate": "Associar Recurso",
+		"fields": {
+			"code": "Código",
+			"area": "Área",
+			"properety": "Propriedade",
+			"resourceModel": "Recurso de Pasto",
+			"georef": "Localização"
+		},
+		"error": {
+			"invalidPoint": "Não é permitido colocar um ponto fora da área",
+			"minCoordinates": "Coloque o mínimo de coordenadas no mapa."
+		}
+    },
+	
+	"resource": {
+		"name": "Recursos de Pasto",
+        "title": "Recursos de Pasto",
+        "addtitle": "Adicionar Recurso de Pasto",
+		"add": "Adicionar Recurso",
+        "fields": {
+			"name": "Nome",
+            "width": "Largura",
+            "height": "Altura",
+            "depth": "Profundidade",
+            "capacity": "Capacidade",
+            "resourceType": "Tipo de Recurso"
+        }
+    },
+	
+	"saleAnimals": {
+        "name": "Venda",
+        "title": "Venda de Animais",
+        "date": "Data da Venda",
+        "client": "Cliente",
+        "currency": "Moeda",
+        "availableList": "Animal(is) disponíveis(s) para venda",
+        "enrolledAnimal": "Animal já foi incluído na venda",
+        "saleList": "Animais inclusos para venda",
+        "save":"Registrar venda",
+        "saveEdit" : "Atualizar Venda",
+        "saveConfirm": "Confirma venda?",
+        "saveConfirmUpdate": "Confirma atualização?",
+        "returnTransactions": "Retornar para listagem",
+        "saleListEmpty" : "Nenhum animal foi incluído na venda!",
+        "fields":{
+            "nickName": "Nome",
+            "value": "Valor de Venda"            
+        } 
+    },
+	
+	"slaughterSale": {
+        "name": "Venda",
+        "title": "Venda de Animais Por Abate",
+        "slaughterhouse": "Frigorífico",		
+        "liveWeight": "Peso Vivo Total",
+        "fields":{
+			"weight": "Peso",
+            "totalSale": "Total de Venda :",
+            "totalLiveWeight": "Peso Vivo Total :",
+            "liveWeightAverage": "Média de Peso Vivo :",
+            "deadWeightAverage": "Média de Peso Morto :"                        
+        }
+    },
+	
+	"species": {
+		"title": "Espécies",
+        "name": "Espécie",
+        "add": "Adicionar Espécie",
+        "fields": {
+            "name": "Nome",
+            "classificationType": "Tipo de Classificação",
+            "active": "Ativo"
+        }
+    },
+	
+	"subspecies": {
+        "title": "Raças",
+        "name": "Raça",
+        "add": "Adicionar Raça",
+        "fields": {
+            "name": "Nome",
+            "species": "Espécie",
+            "active": "Ativo",
+            "mocho": "Mocho",
+            "favorite": "Favorito",
+            "pelage": "Pelagem"
+        }
+    },
+
+	"supplement": {
+		"title": "Suplementos",
+		"name": "Suplemento",
+		"add": "Adicionar Suplemento",
+		"fields": {
+			"name": "Nome",
+			"supplementtype": "Tipo do Suplemento",
+			"productbrand": "Marca do Produto",
+			"expectedconsumption": "Consumo Esperado",
+			"expectedweightgain": "Ganho Esperado",
+			"weight": "Peso",
+			"averagecost": "Custo Médio",
+			"ingredients": "Ingredientes"
+		},
+		"measure": {
+			"ganimalday" : "g/animal/dia",
+			"kg": "kg",
+			"money": "US$"
+		}
+	},
+	
+	"tasks":{
+		"event": "Evento",
+		"taskEvent": "Tarefa",
+		"taskDate": "Data da Tarefa",
+		"time": "Horário",
+		"finishTask": "Finalizar Tarefa"
+	},
+	
+	"taskEvent": {
+		"title": "Tarefas",
+        "add": "Adicionar Tarefa",
+        "fields": {
+			"user": "Usuário",
+            "startTime": "Hora Inicial",
+			"endTime": "Hora Final",
+            "time": "Horário",
+            "description": "Descrição",
+            "status": "Status",
+			"weight": "Peso",
+			"taskDone": "Tarefa Concluída"
+        },
+        "name": "Tarefa",
+        "deleteTaskEvent": "Caso altere o período, suas tarefas serão excluídas.",
+        "finish": "Concluído"
+    },
+
+    "taskEventView": {
+        "title": "Tarefas",
+        "finish": "Concluído"
+    },
+	
+	"trajectoryAnimal":{
+		"title": "Trajetória Animal",
+		"titleSmallWindow" : "Trajetória - {{ date }}",
+		"trajectory": "Trajetória",
+		"date": "Data da Trajetória",		
+		"advanced": "Avançado",
+		"advancedSearch": "Busca Avançada de Trajetórias",	
+		"fields": {
+			"trajectoriesPeriod": "Período das Trajetórias",
+			"period":{
+				"datesWithoutTimeRange": "Intervalo de datas sem tempo",
+				"datesWithTimeRange": "Intervalo de datas com tempo",
+				"datesAndTimeRange": "Intervalo de datas e intervalo de tempo",
+				"allPeriod": "Todo o período de atividade"
+			},			
+			"dateStart": "Data Inicial (De)",
+			"dateEnd": "Data Final (Até)",
+			"dateTimeStart": "Data e Horário Inicial",
+			"dateTimeEnd": "Data e Horário Final",
+			"timeStart": "Horário Inicial",
+			"timeEnd": "Horário Final"
+		},
+		"map":{
+			"start": "Inicio",
+			"end": "Fim",
+			"duration": "Duração",
+			"numberCoordinates": "Nº de Coordenadas",
+			"distance": "Distância Aproximada"
+		},
+		"format": {
+			"text": "Formato Texto (.txt)",
+			"pdf": "Formato PDF (.pdf)",
+			"excel": "Formato Excel (.xlsx)"
+		},	
+		"alert": {
+			"periodNotSelect" : "O período para busca das trajetórias não foi informado.",
+            "nofound" : "Não foram encontradas trajetórias associadas aos dados da busca.",
+            "noValidCoordinates": "A trajetória não possui coordenadas válidas."
+		}		
+    },
+	
+	"transaction": {
+        "name": "Transação",
+        "fields":{
+            "buy": "Compra",
+            "sale": "Venda",
+            "slaughterSale": "Venda por Abate",
+            "date": "Data",
+            "customersupplier": "Cliente/Fornecedor",
+            "value": "Valor",
+            "type":"Tipo",
+            "currency":"Moeda"
+        },
+        "editButton": "Editar",
+        "newSale": "Nova Venda",
+        "newBuy": "Nova Compra",
+        "newSlaughterSale": "Nova Venda por Abate"
+    },
+
+	"user": {
+		"name": "Usuário",
+        "title": "Usuários",
+        "add": "Adicionar Usuário",
+        "passwordChangeSuccess": "Senha alterada com sucesso.",
+        "fields": {
+            "username": "Usuário",
+            "name": "Nome",
+            "email": "E-mail",
+            "active": "Ativo",
+            "profile":"Perfil",
+            "profile-select":"Selecione o perfil --",
+			"language": "Idioma Padrão",
+            "language-select": "Selecione um idioma --",
+            "passwordcurrent": "Senha atual",
+            "password": "Senha",
+            "passwordconfirm": "Confirme a senha",
+			"alerts": "Alertas",			
+			"alertOptions":{
+				"viewNotifies": "Visualizar Notificações de Alertas",
+				"receiveEmail": "Receber Notificações de Alertas por E-mail"
+			}
+        }
+    },
+	
+	"weighing":{
+        "title": "Pesagem de Animais",
+        "lotTitle": "Pesagem de Lotes",
+		"add": "Adicionar Peso",	
+		"fields":{
+			"animal": "Animal",
+            "weight": "Peso",
+            "lot": "Lote",
+			"dateWeighing": "Data da Pesagem"
+		}
+    },
+
+    "lotAnimals": {
+        "save": "Confirmar Associações",
+        "name": "Associações"
+    },
+	
+	"recoverPassword":{
+		"title": "Recuperar Senha",
+		"send": "Enviar",
+		"notEqual": "As senhas não estão iguais!",
+		"notActive": "Este link não está mais ativo!",
+		"success": "Password alterado com sucesso!",
+		"fields":{
+			"newPassword": "Nova Senha",
+			"confirmPassword": "Confirme a Senha"
+		}
+	}
+	
+}

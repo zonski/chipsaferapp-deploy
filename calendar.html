@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title data-i18n="calendar.title"></title>       
+        <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css" crossorigin="anonymous">       
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">  
+    
+        <link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css">
+    
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+
+<div class="main-content">
+	<div class="add-panel__wrapper">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 data-i18n="calendar.title"></h1>
+			</div>
+		</div>
+
+        <div id="action-bar"></div>
+        <div id="calendar"></div>    
+	</div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade primary" id="event-modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" data-i18n="event.title">Evento</h4>
+            </div>
+
+            <div class="modal-body">
+				<div class="row">
+					<div class="col-md-12 text-center option">
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary" id="event-btn" data-option="event" >
+								<span class="icon icon-calendar-2"></span>
+								<span data-i18n="calendar.event">Evento</span>
+                            </button>
+
+                            <button type="button" class="btn btn-default" id="taskEvent-btn" data-option="taskEvent" disabled>
+								<span class="material-icons md-18">list_alt</span>
+								<span data-i18n="calendar.taskEvent">Tarefa</span>
+                            </button>
+                        </div>
+                     </div>
+                </div>
+
+                <div id="modal-switch" class="event">
+				
+					<div id="entry-add">					
+						<input type="hidden" class="form-control field number" name="eventId" id="id" disabled>
+
+                        <div class="form-group">
+							<label data-i18n="event.fields.eventType">Tipo de Evento</label>
+							<select class="form-control field sub" id="eventType" data-sub="id" data-combo="eventType"></select>
+                        </div>
+
+						<div class="form-group event-specific-base" hidden>
+							<label data-i18n="event.fields.inputType">Tipo de Coleta</label>
+                            <select class="form-control field" id="inputType">
+								<option value="1" data-i18n="event.fields.byanimal">Por Animal</option>
+								<option value="2" data-i18n="event.fields.bylot">Por Lote</option>
+							</select>
+                        </div>
+
+						<div class="form-group event-specific-base" id="formLot" hidden>
+							<label data-i18n="event.fields.lot">Lote</label>
+							<input class="form-control field sub required no-validate" name="lot" data-reference="lot">
+							<input type="hidden" class="form-control field sub autocomplete" id="lot" data-sub="id" disabled>
+						</div>
+
+						<div class="form-group event-specific-base" id="formAnimal" hidden>
+							<label data-i18n="event.fields.animal">Animal</label>
+							<input class="form-control field sub required no-validate" name="animal" data-reference="animal">
+							<input type="hidden" class="form-control field sub autocomplete" id="animal" data-sub="id" disabled>
+						</div>
+
+						<div class="form-group event-specific-base" id="formSupplement" hidden>
+							<label data-i18n="event.fields.supplement">Suplemento</label>
+							<input class="form-control field sub required no-validate" name="supplement" data-reference="supplement">
+							<input type="hidden" class="form-control field sub autocomplete" id="supplement" data-sub="id" disabled>
+                        </div>
+
+                        <div class="form-group event-specific-base" id="formDrug" hidden>
+							<label data-i18n="event.fields.drug">Medicamento</label>
+							<input class="form-control field sub required no-validate" name="drug" data-reference="drug">
+							<input type="hidden" class="form-control field sub autocomplete" id="drug" data-sub="id" disabled>
+                        </div>
+
+						<div class="form-group">
+							<label data-i18n="event.fields.description">Descrição</label>
+							<input type="text" class="form-control field" id="description" name="descriptionEvent" maxlength="50">
+                        </div>
+
+                        <div class="form-group">
+                            <label id="startDate-label" data-i18n="event.fields.date">Data</label>
+                            <input type="text" class="form-control field required datepicker" id="startDate">
+                        </div>
+
+                        <div class="form-group" id="endDate-group">
+							<label data-i18n="event.fields.endDate">Data Final</label>
+							<input type="text" class="form-control field required datepicker" id="endDate">
+                        </div>
+
+                       <div class="checkbox">
+							<label>
+								<input type="checkbox" id="endDate-check">
+								<span data-i18n="event.fields.period">Período</span>
+							</label>
+                       </div>
+
+                       <div class="text-right" id="delete-div">
+							<button type="button" class="btn btn-error" id="btn-delete-all-event">
+								<i class="material-icons">delete</i>
+                                <span data-i18n="event.buttons.deleteAll">Apagar período</span>
+                            </button>
+                            <button type="button" class="btn btn-error" id="btn-delete-event">
+								<i class="material-icons">delete</i>
+                                <span data-i18n="event.buttons.delete">Apagar dia</span>
+                            </button>
+                       </div>
+                    </div>
+
+                    <div id="taskEvent" class="list">
+
+						<div id="listTaskEvent">
+							<table id="tableTaskEvent" class="display">
+								<thead>
+									<tr>
+										<th data-i18n="taskEvent.fields.time">Horário</th>
+                                        <th data-i18n="taskEvent.fields.user">Usuário</th>
+										<th>Status</th>
+                                        <th data-i18n="entry.options">Opções</th>
+                                     </tr>
+                                 </thead>
+                                 <tbody></tbody>
+                            </table>
+                            <span id="message-empty" class="hidden" data-i18n="calendar.dontHaveTask">Não existem tarefas para este evento.</span>
+                            <button id="add-taskEvent-btn" class="btn btn-success">
+								 <i class="material-icons">add</i>
+								 <span data-i18n="taskEvent.add">Adicionar Tarefa</span>
+                            </button>
+                       </div>
+
+                       <div id="formTaskEvent">
+						   <input type="hidden" class="form-control field number" name="taskEventId" id="id" disabled>
+						   <input type="hidden" class="form-control field sub" id="eventDay" data-sub="id" disabled>
+						   
+						   <div class="form-group" id="task-done-div">
+								<input type="checkbox" class="station-check" id="done">
+								<label data-i18n="taskEvent.fields.taskDone">Tarefa Finalizada</label>
+						   </div>
+						   						   
+						   
+						   <div class="form-group row-users" id="user-div">
+							  <label data-i18n="taskEvent.fields.user">Usuário</label>
+							  <div class="select">
+								  <select class="form-control field sub array required" multiple="multiple" id="users" data-sub="id">
+								  </select>
+							  </div>
+						  </div>
+				 
+						  <div class="row">							 
+								<div class="col-md-6 form-group">
+									<label data-i18n="taskEvent.fields.startTime">Hora Inicial</label>
+									<input type="time" class="form-control field required" id="startTime">
+								</div>
+
+								<div class="col-md-6 form-group">
+									<label id="interval-label" data-i18n="taskEvent.fields.endTime">Hora Final</label>
+									<input type="time" class="form-control field required" min="00:01" id="endTime">
+								</div>
+						 </div>
+						<div class="row">
+							<div class="col-md-12 form-group">
+								<label data-i18n="taskEvent.fields.description">Descrição</label>
+								<textarea rows="4" class="form-control field" id="description" name="descriptionTaskEvent" maxlength="500"></textarea>
+							</div>
+						</div>
+                      </div>
+                  </div>
+              </div>
+             </div>
+
+             <div class="modal-footer">
+				<button type="button" class="btn btn-danger" id="btn-false-event">
+					<span class="material-icons md-18">close</span>
+					<span data-i18n="button.cancel">Cancelar</span>
+                </button>
+                <button type="button" class="btn btn-success" id="btn-true-event">
+					<span class="material-icons md-18">save</span>
+					<span data-i18n="button.save">Salvar</span>
+                </button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/calendar.js"></script>
+      <script src="js/bundle-vendor-calendar.js"></script>
+
+    <script src="js/bundle-util-calendar.js"></script>
+</body>
+</html>

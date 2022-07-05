@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous"> 
+
+        <link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+    <div class="main-content">
+        <div id="report-filter" class="add-panel add-panel--active">
+          <div class="add-panel__wrapper">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 data-i18n="report.animal.title">Relatório de Animais</h1>
+              </div>
+            </div>
+
+            <div class="row">
+				<div class="col-md-2 form-group">
+					<label data-i18n="animal.fields.gender">Sexo</label>
+					<select class="form-control field" id="gender">
+						<option value="0" data-i18n="select.values.both">Ambos</option>
+						<option value="1" data-i18n="animal.fields.genderMale">Macho</option>
+						<option value="2" data-i18n="animal.fields.genderFemale">Fêmea</option>
+					</select>
+				</div>
+			  
+				<div class="col-md-2 form-group">
+					<label data-i18n="animal.fields.classification">Class</label>
+					<select class="form-control field sub" id="classification" data-sub="id" data-combo="classification"></select>
+				</div>		
+				
+				
+				<div class="col-md-3 form-group">
+					<label data-i18n="animal.fields.deviceCode">Dispositivo</label>
+					<select class="form-control field" id="deviceOption">
+						<option value="0" data-i18n="select.values.both">Ambos</option>
+						<option value="1" data-i18n="report.animal.fields.deviceoption.withDevice">Animais com Dispositivos</option>
+						<option value="2" data-i18n="report.animal.fields.deviceoption.withoutDevice">Animais sem Dispositivos</option>
+					</select>
+				</div>
+  
+				<div class="col-md-2 form-group">
+					<label data-i18n="animal.fields.subspecies">Raça</label>                
+					<select class="form-control field sub" id="subspecies" data-sub="id" data-combo="subspecies">
+						<option value="0" data-i18n="select.values.all">Todos</option>
+					</select>
+				</div>
+
+				<div class="col-md-2 form-group">
+					<label data-i18n="animal.fields.pelage">Pelagem</label>
+					<select class="form-control field sub" id="pelage" data-sub="id" data-combo="pelage"></select>
+				</div>
+				
+				<div class="col-md-2 form-group">
+					<label data-i18n="animal.fields.animalStatus">Status</label>                
+					<select class="form-control field sub" id="animalStatus" data-sub="id" data-combo="animalStatus"></select>
+				</div>
+				
+				<div class="col-md-2 form-group">
+					<label data-i18n="animal.fields.lot">Lote</label>
+					<select class="form-control field sub" id="lot" data-sub="id" data-combo="lot"></select>
+                </div>
+
+                <div class="col-md-3 form-group">
+					<label data-i18n="report.animal.fields.dateBirthStart">Data de Nascimento (De)</label>
+					<input type="text" class="form-control field datepicker" id="dateBirthStart">
+                </div>
+
+				<div class="col-md-3 form-group">
+					<label data-i18n="report.animal.fields.dateBirthEnd">Data de Nascimento (Até)</label>
+					<input type="text" class="form-control field datepicker" id="dateBirthEnd">
+				</div>
+
+				<div class="col-md-3 form-group">
+					<label data-i18n="report.animal.fields.dateWeaningStart">Data de Desmama (De)</label>
+					<input type="text" class="form-control field datepicker" id="dateWeaningStart">
+				</div>
+			  
+				<div class="col-md-3 form-group">
+					<label data-i18n="report.animal.fields.dateWeaningEnd">Data de Desmama Final (Até)</label>
+					<input type="text" class="form-control field datepicker" id="dateWeaningEnd">
+				</div>
+			  
+            </div>
+          </div>
+
+          <div class="add-panel__controls">
+            <div class="row">
+              <div class="col-md-12 text-right">
+                <button class="btn btn-danger report-action entry-btn" data-action="clear">
+                  <i class="material-icons">close</i>
+                  <span data-i18n="button.clear">Limpar</span>
+                </button>
+                <button class="btn btn-success report-action entry-btn" data-action="filter">
+                  <i class="material-icons">search</i>
+                  <span data-i18n="button.filter">Filtro</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-content__wrapper">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 data-i18n="report.animal.title">Relatório de Animais</h1>
+            </div>
+          </div>
+		  
+          <div class="report-table">		  
+            <table id="report-table" class="display table-secondmodel">
+              <thead>
+                <tr>                
+                  <th hidden>ID</th>
+                  <th>Animal</th>
+                  <th data-i18n="animal.fields.deviceCode">Dispositivo</th>
+                  <th data-i18n="animal.fields.gender">Sexo</th>
+                  <th data-i18n="animal.fields.classification">Classificação</th>
+				          <th data-i18n="animal.fields.subspecies">Raça</th>
+                  <th data-i18n="animal.fields.pelage">Pelagem</th>
+                  <th data-i18n="animal.fields.animalStatus">Status Atual</th>
+                  <th data-i18n="animal.fields.lot">Lote</th>
+                  <th data-i18n="animal.fields.dateBirth">Data de Nascimento</th>
+                  <th data-i18n="animal.fields.dateWeaning">Data de Desmama</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="animalMovement">
+      <div class="modal-dialog modal-sm draw-map">
+        <div class="modal-content draw-map">
+          <div class="modal-header">
+            <h4 class="modal-title" data-i18n="chart.animalMovement.title">Movimentação do Animal</h4>
+          </div>
+
+          <div class="modal-body">
+            <div class="row">
+              <input type="hidden" class="form-control field number" id="id" disabled>
+
+              <div class="col-md-6 form-group">
+                <label data-i18n="chart.animalMovement.from">De</label>
+                <input type="text" class="form-control required field datepicker" id="dateFrom">
+              </div>
+              <div class="col-md-6 form-group">
+                <label data-i18n="chart.animalMovement.to">Até</label>
+                <input type="text" class="form-control field required datepicker" id="dateTo">
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer modal-center">
+            <button type="button" data-dismiss="modal" class="btn btn-default" id="btn-cancel">
+              <span class="glyphicon glyphicon-remove"></span>
+              <span data-i18n="button.cancel">Cancelar</span>
+            </button>
+
+            <button type="button" class="btn btn-success" id="btn-ok">
+              <span class="glyphicon glyphicon-ok"></span>
+              <span data-i18n="button.confirm">Confirmar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade modal-report-table" id="drug-modal">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" data-i18n="drug.title">Medicamento</h4>
+          </div>
+
+          <div class="modal-body">
+            <table id="drug-table" class="display">
+                <thead>
+                  <th data-i18n="drug.fields.name">Name</th>
+                  <th data-i18n="drug.fields.dosage">Dosagem</th>
+                  <th data-i18n="drug.fields.immunization">Imunização</th>
+                  <th data-i18n="drug.fields.shortage">Carência (Abate)</th>
+                  <th data-i18n="drug.fields.applicationDose">Doses Aplicadas</th>
+                  <th data-i18n="drug.fields.user">User</th>
+                  <th data-i18n="drug.fields.date">Data</th>
+                </thead>
+            </table>
+          </div>
+
+          <div class="modal-footer modal-center">
+            <button type="button" data-dismiss="modal" class="btn btn-default" id="btn-cancel">
+              <span class="glyphicon glyphicon-remove"></span>
+              <span data-i18n="button.close">Fechar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script src="js/reportAnimal.js"></script>
+      <script src="js/bundle-vendor-report.js"></script>
+
+    <script src="js/bundle-util-report.js"></script>
+</body>
+</html>

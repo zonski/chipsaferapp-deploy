@@ -1,0 +1,205 @@
+<div class="top-bar" id="top-bar">
+
+     <a class="main-hamburger" onClick="app.toggleSidebar()">
+        <span class="btn-side-nav-icon"></span>
+    </a>
+
+  <a class="main-logo" href="/home.html">
+	<img src="images/logo_blank.png" id="imglogo" alt="Logo Chipsafer" class="main-logo__icon">
+    <!--<div class="main-logo__wordmark">ChipSafer</div>-->
+  </a>
+    <h2 class="top-bar__property-name">
+        <a href="propertyMenu.html">
+            <span id="property-name"></span>
+        </a>
+    </h2>
+  <div class="top-bar__right-panel"> 
+	<span class="icon-navbar material-icons hand" data-i18n="[title]menu.logout">
+		<a id="logout" class="tooltip-chipsafer" href="#">exit_to_app</a>
+	</span>	
+
+    <span class="hand">
+        <span 
+            data-toggle="dropdown"
+            role="button" 
+            id="ddSetup" 
+            aria-haspopup="true" 
+            aria-expanded="false">		
+			<span class="icon-navbar material-icons" data-i18n="[title]menu.setup.title">
+				<span class="tooltip-chipsafer">phonelink_setup</span>
+			</span>        
+		</span>
+        <ul id="setupBox" class="dropdown-menu" role="menu" aria-labelledby="ddSetup">
+            <li class="link" data-i18n="menu.setup.title"></li>
+            <li class="link property-name"></li>
+            <li class="link"><a href="entryUser.html" data-i18n="menu.setup.user-menu"></a></li>
+            <li class="link"><a href="entryUser.html" data-i18n="menu.setup.user-list-menu"></a></li>
+            <li class="link"><a href="termsConditions.html" data-i18n="menu.setup.terms-conditions"></a></li>
+            <li class="link"><a id="open-change-pwd-modal" data-i18n="menu.setup.change-pwd-menu"></a></li>           
+			<li class="link">&nbsp;</li>
+            <li class="link" data-i18n="menu.setup.language-menu"></li>
+            <li class="link">
+                <ol id="translate">
+                    <li>
+                        <a role="menuitem" tabindex="-1" data-value="en-US" title="en-US" href="#">
+                            <img src="../../images/icons/enUS.png"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a role="menuitem" tabindex="-1" data-value="pt-BR" title="pt-BR" href="#">
+                            <img src="../../images/icons/ptBR.png"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a role="menuitem" tabindex="-1" data-value="es-AR" title="es" href="#">
+                            <img src="../../images/icons/esES.png"/>
+                        </a>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+    </span>
+	
+	<span class="icon-navbar material-icons hand" data-toggle="modal" data-target="#task-modal" data-i18n="[title]menu.task.title">
+	<a id="open-task-modal" class="tooltip-chipsafer">event_note</a>
+</span>	
+
+
+<!-- Modal -->
+<div class="modal primary fade" id="task-modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+    	<div class="modal-content">
+     		<div class="modal-header">
+				<h4 class="modal-title" data-i18n="menu.task.title"></h4>
+			</div>
+			<div class="modal-body">
+					<table id="task-table" class="table-modal display" cellspacing="0">
+						<thead>
+								<tr>
+									<th hidden>Id</th>
+									<th data-i18n="tasks.event"></th>
+									<th data-i18n="tasks.taskEvent"></th>
+									<th data-i18n="tasks.taskDate"></th>
+									<th data-i18n="tasks.time"></th>
+									<th data-i18n="tasks.finishTask"></th>
+								</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <span class="hand notifyCloud">
+	<span 
+        data-toggle="dropdown"
+        role="button" 
+        id="ddNotify" 
+        aria-haspopup="true" 
+        aria-expanded="false">
+			<span class="icon-navbar material-icons" 
+				  data-i18n="[title]notificationWindow.title">
+				<span class="tooltip-chipsafer">notifications</span>
+			</span>
+			<span class="button__badge">0</span>
+	</span>
+	<ul id="notifyBox" class="dropdown-menu" role="menu" aria-labelledby="ddNotify">
+        <li class="link">
+          <span class="material-icons see-map">pin_drop</span>
+          <span data-i18n="notificationWindow.seeMap" class="see-map">See on map</span>
+          <span class="heatmap" onClick="app.notifications.heatMap();"><i class="material-icons">remove_red_eye</i></span>
+        </li>
+        <ol>
+            <li style="background-color:#ffffff;">
+              <center>
+                <img src="./images/loading-mini.gif">
+              </center>
+            </li>
+        </ol>
+        <li class="link" id="open-notifies-modal" data-toggle='modal' data-target='#notifies-modal'>
+            <span class="material-icons">pin_drop</span>
+            <span data-i18n="notificationWindow.readMore"></span>
+        </li>
+    </ul>
+</span>	
+
+<!-- Modal Notifications-->
+<div class="modal primary fade" id="notifies-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+           <div class="modal-header">
+              <h4 class="modal-title" data-i18n="notificationWindow.title"></h4>
+            </div>
+            <div class="modal-body">
+			          <table id="notify-table" class="table-modal notifies display" cellspacing="0">
+                    <thead>
+                        <tr>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                          <th></th>					    
+                          <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-danger" id="btn-close-change-pwd" data-dismiss="modal">
+                  <span class="material-icons">cancel</span>
+                  <span data-i18n="button.close">Fechar</span>
+              </button>
+          </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<div class="modal fade primary" id="change-pwd-modal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+					<span class="material-icons">create</span>
+                    <span data-i18n="password.modal.title">Password</span>
+                </h4>
+            </div>
+
+            <div class="modal-body" id="change-pwd-fields">
+                <form id="changePasswordForm" class="form-body">
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label data-i18n="user.fields.passwordcurrent">Current Password</label>
+                            <input type="password" class="form-control field required" id="currentPassword" name="currentPassword" maxlength="25">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label data-i18n="user.fields.password">Password</label>
+                            <input type="password" class="form-control field required" id="newPassword" name="newPassword" maxlength="25">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label data-i18n="user.fields.passwordconfirm">Password Confirmation</label>
+                            <input type="password" class="form-control field required" id="confirmPassword" name="confirmPassword" maxlength="25">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="btn-close-change-pwd" data-dismiss="modal">
+                    <span class="material-icons">cancel</span>
+                    <span data-i18n="button.close">Fechar</span>
+                </button>
+                <button type="button" class="btn btn-success" id="btn-save-change-pwd">
+                    <span class="material-icons">save</span>
+                    <span data-i18n="button.save">Salvar</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

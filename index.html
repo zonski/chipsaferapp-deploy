@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="home.title">Chipsafer</title>
+    
+    <link rel="stylesheet" href="css/styles.min.css">
+    
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="login-page" data-page="index">
+    <div class="cover-up"></div>
+    <img class="login-page__logo" src="images/logo.png" alt="Logo Chipsafer">
+
+    <section class="login-window effect5 ">
+        <h2 data-i18n="login.title">Entrar no sistema</h2>
+
+        <input type="text" name="username" id="username-input" class="login-input">
+        <input type="password" name="password" id="password-input" class="login-input">
+        <button class="btn btn-success" data-action="login" id="btn-login" data-i18n="login.button">Entrar</button>
+        <div class="recovery-pwd" data-i18n="login.recoverypwd"></div>
+    </section>
+
+    <section class="login-window effect5 recover-window">
+        <h2 data-i18n="login.recoverypwd">Entrar no sistema</h2>
+        <input type="text" name="email" id="email-input" class="email-input" placeholder="E-Mail">
+        <button class="btn btn-success" id="btn-recover" data-i18n="login.recoverypwdbtn"></button>
+        <div class="recovery-pwd-bck" data-i18n="login.recoverypwdbck"></div>
+    </section>
+    <div data-i18n="login.recoverypwdemail404" class="recoverypwdemail404" style="display:none"></div>
+    <div data-i18n="login.recoverypwdsuccess" class="recoverypwdsuccess" style="display:none"></div>
+    <div data-i18n="login.recoverypwdEmlErr" class="recoverypwdEmlErr" style="display:none"></div>
+	
+    <script src="js/index.js"></script>
+        <script src="js/bundle-vendor-index.js"></script>
+
+        <script src="js/bundle-util-index.js"></script>
+    </body>
+</html>
+

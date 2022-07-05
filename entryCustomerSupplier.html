@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous">
+        		
+		<link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css">
+		
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+<div class="main-content">
+  <div id="entry-add" class="add-panel">
+    <div class="add-panel__wrapper">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 data-i18n="customerSupplier.add"></h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <input type="hidden" class="form-control field number" id="id" disabled>
+
+        <div class="col-md-3 form-group">
+          <label data-i18n="customerSupplier.fields.name">Nome</label>
+          <input type="text" class="form-control field required" id="name" maxlength="50">
+        </div>
+
+		
+        <div class="col-md-3 form-group">
+          <label data-i18n="customerSupplier.fields.email">E-mail</label>
+          <input type="text" class="form-control field required" id="email" maxlength="50">
+        </div>
+		
+		
+		<div class="col-md-3 form-group">
+			<label data-i18n="customerSupplier.fields.classification">Classificação</label>
+			<select class="form-control field" id="classification">
+				<option value="0" data-i18n="customerSupplier.fields.classoption.customer">Cliente</option>
+				<option value="1" data-i18n="customerSupplier.fields.classoption.supplier">Fornecedor</option>
+				<option value="2" data-i18n="customerSupplier.fields.classoption.customerAndSuplier">Cliente e Fornecedor</option>
+			</select>
+		</div>
+		
+		
+		<div class="col-md-3 form-group">
+			<label data-i18n="customerSupplier.fields.businessType">Tipo de Negócio</label>
+			<select class="form-control field sub" id="businessType" data-sub="id" data-combo="businessType"></select>
+		</div>
+		
+		 <div class="col-md-3 form-group">
+			<label data-i18n="customerSupplier.fields.Street">Endereço</label>
+			<input type="text" class="form-control field" id="street" maxlength="70">
+			<input type="hidden" class="form-control field" id="addressId">
+		</div>
+
+		<div class="col-md-1 form-group">
+			<label data-i18n="customerSupplier.fields.Number">Número</label>
+			<input type="text" class="form-control field" id="number" maxlength="4">
+		</div>	
+
+		<div class="col-md-2 form-group">
+			<label data-i18n="customerSupplier.fields.Complement">Complemento</label>
+			<input type="text" class="form-control field" id="complement" maxlength="50">
+		</div>	
+
+		<div class="col-md-3 form-group">
+			<label data-i18n="customerSupplier.fields.Country">País</label>
+			<select class="form-control field sub" id="country" data-sub="id" data-combo="country"></select>
+		</div>	
+
+		<div class="col-md-3 form-group">
+			<label data-i18n="customerSupplier.fields.State">Estado</label>
+			<select class="form-control field sub" id="state" data-sub="id" data-combo="state"></select>
+		</div>
+
+		<div class="col-md-3 form-group">
+			<label data-i18n="customerSupplier.fields.City">Cidade</label>
+			<select class="form-control field sub" id="city" data-sub="id" data-combo="city"></select>
+		</div>
+
+      </div>	   
+    </div>
+
+    <div class="add-panel__controls">
+      <div class="row">
+        <div class="col-md-12 text-right">
+          <button class="btn btn-danger entry-action entry-btn" data-action="addCancel">
+            <i class="material-icons">close</i>
+            <span data-i18n="entry.cancel">Cancelar</span>
+          </button>
+		  
+		  <button class="btn btn-success entry-action entry-btn" data-action="submit">
+            <i class="material-icons">save</i>
+            <span data-i18n="entry.save">Salvar</span>
+          </button>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="main-content__wrapper">
+    <div id="entry-title">
+      <div class="row">
+        <div class="col-md-8">
+          <h1 data-i18n="customerSupplier.title"></h1>
+        </div>
+        <div class="col-md-4">
+          <div class="main-content__controls">
+            <button class="btn btn-success entry-action" data-action="addOpen">
+              <i class="material-icons">add</i>
+              <span data-i18n="customerSupplier.add"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry-table">
+      <table id="entry-table" class="display table">
+        <thead>
+          <tr>
+            <th hidden>ID</th>
+            <th data-i18n="customerSupplier.fields.name">Nome</th>
+			<th data-i18n="customerSupplier.fields.classification">Classificação</th>
+            <th data-i18n="customerSupplier.fields.businessType">Tipo de Negócio</th>
+			<th id="edit" data-i18n="entry.edit">Editar</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="js/entryCustomerSupplier.js"></script>
+		<script src="js/bundle-vendor.js"></script>
+		
+		<!--
+		<script src="../app/js/lib/bootstrapOld.min.js"></script>
+		<script src="../app/js/lib/datatables_new.js"></script>
+		<script src="../app/js/lib/datatables.min.js"></script>
+		<script src="../app/js/lib/dataTables.buttons.min.js"></script> -->
+	  
+		<script src="js/bundle-vendor-entry.js"></script>
+
+		<script src="js/bundle-util.js"></script>
+    </body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous">
+        		
+		<link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css">
+		
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+
+  <div class="main-content">
+    <div id="entry-add" class="add-panel">
+      <div class="add-panel__wrapper">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 data-i18n="gateway.add">Adicionar Gateways</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <input type="hidden" class="form-control field number" id="id" disabled>
+
+          <div class="col-md-3 form-group">
+            <label data-i18n="gateway.fields.description">Descricao</label>
+            <input type="text" class="form-control field required" id="description" maxlength="100">
+          </div>
+		  
+		  <div class="col-md-3 form-group">
+            <label>Gateway EUI</label>
+            <input type="text" class="form-control field" id="gatewayEUI" maxlength="100">
+          </div>
+		  
+          <div class="col-md-3 form-group">
+            <label data-i18n="gateway.fields.altitude">Altitude</label>
+            <div class="col-auto">
+              <label class="sr-only" for="shortage" data-i18n="resourceModel.fields.altitude">Altitude</label>
+              <div class="input-group mb-2 mb-sm-0">
+                <input type="text" class="form-control field number required" id="altitude" maxlength="12" placeholder="meters">
+                <div class="input-group-addon">m</div>
+              </div>
+            </div>
+          </div>
+		  
+          <div class="col-md-3 form-group">
+            <label data-i18n="gateway.fields.mac">Mac Address</label>
+            <input type="text" class="form-control field required" id="macAddress">            
+          </div>
+		  
+          <div class="col-md-3 form-group">
+            <label data-i18n="area.fields.georef">Localização</label>
+            <br>
+            <button class="btn btn-success entry-action field" id="georeferencing" data-id="0" data-action="selectGeoref">
+              <i class="material-icons">place</i>
+              <span data-i18n="area.fields.georef">Localização</span>
+            </button>
+          </div>
+
+        </div>
+		
+		<div class="row">	  
+			<div class="col-md-12">
+				<h3 data-i18n="gateway.fields.alerts"></h3>
+			</div>
+			
+			<div class="col-md-4 form-group">
+				<input type="checkbox" class="station-check" id="statusAlert" checked>
+				<label data-i18n="gateway.fields.statusAlert"></label>			
+			</div>
+		</div>
+		
+		
+      </div>
+
+      <div class="add-panel__controls">
+        <div class="row">
+          <div class="col-md-12 text-right">
+            <button class="btn btn-danger entry-action entry-btn" data-action="addCancel">
+                  <i class="material-icons">close</i>
+                  <span data-i18n="entry.cancel">Cancelar</span>
+                </button>
+            <button class="btn btn-success entry-action entry-btn" data-action="submit">
+                  <i class="material-icons">save</i>
+                  <span data-i18n="entry.save">Salvar</span>
+                </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content__wrapper">
+      <div id="entry-title">
+        <div class="row">
+
+          <div class="col-md-6">
+            <h1 data-i18n="gateway.title">Gateways</h1>
+          </div>
+
+          <div class="col-md-6">
+            <div class="main-content__controls">
+				<button class="btn btn-success entry-action" data-action="addOpen">
+					<i class="material-icons">add</i>
+					<span data-i18n="gateway.add">Adicionar Gateways</span>
+				</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="entry-table">
+        <table id="entry-table" class="display table">
+          <thead>
+            <tr>
+              <th hidden>ID</th>
+              <th data-i18n="gateway.fields.description">Descrição</th>
+              <th data-i18n="gateway.fields.altitude">Altitude</th>
+              <th data-i18n="gateway.fields.coordinates">Coordenadas</th>
+              <th data-i18n="gateway.fields.mac">Mac Address</th>
+              <th id="edit" data-i18n="entry.options">Opções</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="modal fade" id="georef-modal">
+	<div class="modal-dialog draw-map">
+		<div class="modal-content draw-map">
+			<div class="modal-header">
+				<i class="material-icons vertical-center-header">place</i>
+				<h4 class="modal-title vertical-center-header" data-i18n="property.fields.georef">Localização</h4>
+			</div>
+
+			<div class="modal-body text-center">
+				<div class="row">
+					<div class="col-md-6 text-right">             
+							<span data-i18n="georef.coordinates"></span>
+					</div>
+          <div class="col-md-6 text-center">
+			      <div id="georefs" data-min="1"></div>
+          </div>
+				</div>
+				
+				<div id="mapbody">				
+					<div id="floating-map-panel">
+						<div type="button" id="add-marker" data-i18n="[title]gateway.marker.add"><i class="material-icons">add_circle</i></div>
+						<div type="button" id="delete-marker" data-i18n="[title]gateway.marker.remove"><i class="material-icons">delete_forever</i></div>
+					</div>
+					<div id="map"></div>
+				</div>
+				
+			    <div id="text">
+					<div class="row labels">
+						<div class="col-md-6">
+							<label data-i18n="georef.y">Latitude</label>
+						</div>
+						<div class="col-md-6">
+							<label data-i18n="georef.x">Longitude</label>
+						</div>
+				   </div>
+				   
+				</div>
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" data-dismiss="modal" class="btn btn-success" id="btn-true-georef">
+            <i class="material-icons">done</i>
+            <span data-i18n="georef.confirm">Confirmar</span>
+        </button>
+			</div>
+		</div>
+	</div>
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-p1r_ULTiJLbbUOwC2B2yywLGsQ3vIcM&libraries=drawing"></script>
+  <script src="js/entryGateway.js"></script>
+		<script src="js/bundle-vendor.js"></script>
+		
+		<!--
+		<script src="../app/js/lib/bootstrapOld.min.js"></script>
+		<script src="../app/js/lib/datatables_new.js"></script>
+		<script src="../app/js/lib/datatables.min.js"></script>
+		<script src="../app/js/lib/dataTables.buttons.min.js"></script> -->
+	  
+		<script src="js/bundle-vendor-entry.js"></script>
+
+		<script src="js/bundle-util.js"></script>
+    </body>
+</html>

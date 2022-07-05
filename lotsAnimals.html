@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous"> 
+        
+        <link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+
+	<div class="main-content">
+		<div class="row">
+			<div class="col-md-12">
+            </div>
+        </div>
+		
+		<div id="entry-title">
+			<div class="main-content__wrapper main-content__header">
+				<div class="row">
+					<div class="col-md-6">
+						<h1 id="title">Lote</h1>
+					</div>
+					<div class="col-md-6">
+					  <div class="main-content__controls">
+						<button id="back-btn" class="btn btn-success">
+						  <i class="material-icons">keyboard_arrow_left</i>
+						  <span data-i18n="button.back">Voltar</span>
+						</button>
+					  </div>
+					</div>
+				</div><br>
+
+				<div class="row">
+					<div class="col-md-3 form-group">
+					  <label data-i18n="associateLot.lotToLot.originLot"></label>
+					  <select class="form-control field sub required" id="lotId" data-sub="id" data-combo="lot"></select>
+					</div>
+					<div class="col-md-3 form-group"></div>
+					<div class="col-md-3 form-group">
+						<h2 class="table-title" id="animalsInLot" data-i18n="associateLot.lotToLot.animalsInLot">Animal(is) no lote</h2>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="div-tables col-md-6">
+						<div class="lotanimals">						
+							<table id="source" class="display table-secondmodel">
+								<thead>
+									<tr>
+										<th></th>
+										<th data-i18n="animal.fields.nickName"></th>										
+									</tr>
+								</thead>
+							</table>
+						</div>
+					</div>
+					
+					<div class="lotanimals col-sm-6">						
+						<table id="destination" class="display table-secondmodel">
+							<thead>
+								<tr>
+									<th></th>
+									<th data-i18n="animal.fields.nickName"></th>
+									<th hidden></th>
+									<th hidden></th>
+								</tr>
+							</thead>
+						</table>
+						
+						<table class="display table" id="excludedItensList"></table>
+					</div>
+				</div><br>
+			  
+				<div class="add-panel__controls">
+					<div class="row">
+						<div class="col-md-12 text-right">
+							<button class="btn btn-success entry-action entry-btn" data-action="submit">
+								<i class="material-icons">save</i>
+								<span data-i18n="lotAnimals.save">Salvar</span> 
+							</button>                    
+						</div>                  
+					</div>
+				</div><br>
+			</div>
+		</div>
+	</div>
+	<script src="js/lotsAnimals.js"></script>
+      <script src="js/bundle-vendor-manage.js"></script>
+
+    <script src="js/bundle-util-manage.js"></script>
+</body>
+</html>

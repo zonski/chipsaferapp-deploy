@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title data-i18n="home.title">Home</title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">	
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">		
+		
+		<link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css"> 
+		
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+
+<div class="main-content">
+    <div id="map"></div>
+    <div class="overlay-bar">
+    <span class="material-icons" onClick="setup.toggleLayerBar()">close</span>
+    <h2 data-i18n="home-map.overlay-bar.title"></h2>
+    <ul id="layerOptions"></ul>
+</div>
+<div class="overlay-bar-badge" onClick="setup.toggleLayerBar()">
+    <img src="images/icons/layers.png">
+</div>
+</div>
+<div class="notify-badge">
+    <ul>
+        <li>More than two hours without showing notification</li>
+        <li><img src="images/icons/alert-icon.png" width="64px"/></li>
+    </ul>    
+</div>
+
+<ul id="notify-badge-translate" style="display:none">
+    <li data-i18n="notificationWindow.datetime"></li>
+    <li data-i18n="notificationWindow.device-code"></li>
+    <li data-i18n="notificationWindow.animal"></li>
+    <li data-i18n="notificationWindow.battery"></li>                       
+    <li data-i18n="notificationWindow.message"></li>
+    <li data-i18n="notificationWindow.seeMap"></li>
+    <li data-i18n="alert.modal.empty"></li>
+</ul>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-p1r_ULTiJLbbUOwC2B2yywLGsQ3vIcM&libraries=visualization"></script>
+<script src="js/home.js"></script>
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        
+        <script src="js/bundle-vendor.js"></script>
+		
+		<!--
+		<script src="../app/js/lib/bootstrapOld.min.js"></script>
+		<script src="../app/js/lib/datatables_new.js"></script>
+		
+		<script src="../app/js/lib/dataTables.buttons.min.js"></script> -->
+		
+
+        <script src="js/bundle-util.js"></script>
+    </body>
+</html>

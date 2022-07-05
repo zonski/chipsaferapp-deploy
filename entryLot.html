@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous">
+        		
+		<link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css">
+		
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+
+        <div class="main-content">
+          <div id="entry-add" class="add-panel">
+            <div class="add-panel__wrapper">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1 data-i18n="lot.add">Adicionar Lote</h1>
+                </div>
+              </div>
+
+              <div class="row">
+                <input type="hidden" class="form-control field number" id="id" disabled>
+
+                <div class="col-md-4 form-group">
+                  <label data-i18n="lot.fields.name">Nome</label>
+                  <input type="text" class="form-control field required" id="name" maxlength="50">
+                </div>
+
+				        <div class="col-md-4 form-group">
+                  <label data-i18n="lot.fields.pasture">Pasto</label>
+                  <select class="form-control field sub" id="areaCurrent" data-sub="id" data-combo="area"></select>
+                </div>
+				
+              </div>
+			  
+            </div>
+            <div class="add-panel__controls">
+              <div class="row">
+                <div class="col-md-12 text-right">
+                  <button class="btn btn-danger entry-action entry-btn" data-action="addCancel">
+                      <i class="material-icons">close</i>
+                      <span data-i18n="entry.cancel">Cancelar</span>
+                  </button>
+                  <button class="btn btn-success entry-action entry-btn" data-action="submit">
+                      <i class="material-icons">save</i>
+                      <span data-i18n="entry.save">Salvar</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-content__wrapper">
+            <div id="entry-title">
+              <div class="row">
+                <div class="col-md-8">
+                  <h1 data-i18n="lot.title">Lote</h1>
+                </div>
+                <div class="col-md-4">
+                  <div class="main-content__controls">
+                    <button class="btn btn-success entry-action" data-action="addOpen">
+                      <i class="material-icons">add</i>
+                      <span data-i18n="lot.add">Adicionar Lote</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="entry-table main-content__wrapper">
+            <table id="entry-table" class="display table">
+              <thead>
+                <tr>
+                  <th hidden>Id</th>
+                  <th data-i18n="lot.fields.name">Nome</th>
+                  <th data-i18n="lot.fields.quantity">Quantidade</th>
+				  <th data-i18n="lot.fields.pasture">Pasto</th>
+                  <th id="edit" data-i18n="entry.options">Opções</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+
+<script src="js/entryLot.js"></script>
+		<script src="js/bundle-vendor.js"></script>
+		
+		<!--
+		<script src="../app/js/lib/bootstrapOld.min.js"></script>
+		<script src="../app/js/lib/datatables_new.js"></script>
+		<script src="../app/js/lib/datatables.min.js"></script>
+		<script src="../app/js/lib/dataTables.buttons.min.js"></script> -->
+	  
+		<script src="js/bundle-vendor-entry.js"></script>
+
+		<script src="js/bundle-util.js"></script>
+    </body>
+</html>

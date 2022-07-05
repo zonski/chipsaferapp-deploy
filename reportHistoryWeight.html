@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous"> 
+
+        <link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+
+	<div class="main-content">
+		<div id="report-filter" class="add-panel add-panel--active">
+			<div class="add-panel__wrapper">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 data-i18n="report.weighing.title">Relatório de Pesagens</h1>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-3 form-group">
+						<label data-i18n="report.weighing.fields.weighingType">Tipo de Pesagem</label>
+						<select class="form-control field required" id="typeOption">
+							<option value="" data-i18n="select.values.default" disabled selected>Selecione...</option>
+							<option value="1">Animal</option>
+							<option value="2" data-i18n="report.weighing.fields.lot">Lote</option>
+						</select>
+					</div>
+				
+					<div class="col-md-3 form-group d-none" id="type-animal-div">
+						<label>
+							<span>Animal</span>
+							<i class="info-icon" data-toggle="tooltip" data-placement="right" data-i18n="[title]report.weighing.tooltip.animal">info_outline</i>
+						</label>
+						<select class="form-control field sub" id="animal" data-sub="id" data-combo="animal"></select>
+					</div>
+
+					<div class="col-md-3 form-group d-none" id="type-lot-div">
+						<label>
+							<span data-i18n="report.weighing.fields.lot">Lote</span>
+							<i class="info-icon" data-toggle="tooltip" data-placement="right" data-i18n="[title]report.weighing.tooltip.lot">info_outline</i>
+						</label>
+						<select class="form-control field sub" id="lot" data-sub="id" data-combo="lot"></select>
+					</div>
+					
+					
+					<div class="col-md-3 form-group">
+						<label data-i18n="report.weighing.fields.weighingPeriod">Período dos Status</label>
+						<select class="form-control field required" id="periodOption">
+							<option value="" data-i18n="select.values.default" disabled selected>Selecione...</option>
+							<option value="1" data-i18n="select.values.period.all">Todo o período</option>
+							<option value="2" data-i18n="select.values.period.datesBetween">Datas entre...</option>
+						</select>
+					</div>
+				</div>
+			
+				<div class="row d-none" id="period-div">				
+					<div class="col-md-2 form-group">
+						<label data-i18n="report.weighing.fields.startDate">Periodo Inicial (De)</label>
+						<input type="text" class="form-control field datepicker" id="startDate">
+					</div>
+					
+					<div class="col-md-2 form-group">
+						<label data-i18n="report.weighing.fields.endDate">Periodo Final (Até)</label>
+						<input type="text" class="form-control field datepicker" id="endDate">
+					</div>			
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="add-panel__controls">
+			<div class="row">
+				<div class="col-md-12 text-right">
+					<button class="btn btn-danger report-action entry-btn" data-action="clear">
+					  <i class="material-icons">close</i>
+					  <span data-i18n="button.clear">Limpar</span>
+					</button>
+					<button class="btn btn-success report-action entry-btn" data-action="filter">
+					  <i class="material-icons">search</i>
+					  <span data-i18n="button.filter">Filtro</span>
+					</button>
+				</div>
+			</div>
+		</div>
+  
+
+		<div class="main-content__wrapper">
+			<div class="row">
+				<div class="col-md-12">
+				  <h1 data-i18n="report.weighing.title">Relatório de Pesagens</h1>
+				</div>
+			</div>
+			<div class="report-table">
+				<table id="report-table" class="display table-secondmodel">
+				  <thead>
+					<tr>
+					  <th style="width: 50%" data-i18n="report.weighing.fields.weight">Peso</th>
+					  <th style="width: 50%" data-i18n="report.weighing.fields.weighingDate">Data da Pesagem</th>
+					</tr>
+				  </thead>
+				</table>
+			</div>
+		</div>
+    </div>
+	
+
+	<!-- Modal -->
+<div class="modal fade" id="chart-modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+	<!--
+	<div class="modal fade primary" id="chart-modal">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content modal-chart">
+			-->
+				<div class="modal-body">
+					<div class="chart-box">
+						<div>
+							<span data-i18n="report.weighing.chart.title"></span>
+							
+							<span></span>	
+						</div>
+						<div id="container-chart" style="min-width: 310px; height: 350px; margin: 0 auto"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>	
+<script src="js/reportHistoryWeight.js"></script>
+      <script src="js/bundle-vendor-report.js"></script>
+
+    <script src="js/bundle-util-report.js"></script>
+</body>
+</html>

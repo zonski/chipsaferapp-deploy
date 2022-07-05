@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dashboard</title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous"> 
+        
+        <link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+<div class="main-content">
+
+    <div id="entry-title" class="main-content__wrapper main-content__header">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 data-i18n="">Dashboard</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs" id="dashboardTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="animals-tab" data-toggle="tab" href="#animals" role="tab" aria-controls="animals" aria-selected="true" data-i18n="dashboard.tab.animalsProperty"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="weighing-tab" data-toggle="tab" href="#weighing" role="tab" aria-controls="weighing" aria-selected="true" data-i18n="dashboard.tab.animalWeighing"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="transaction-tab" data-toggle="tab" href="#transactions" role="tab" aria-controls="transactions" aria-selected="true" data-i18n="dashboard.tab.animalTransactions"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="monitoring-tab" data-toggle="tab" href="#monitoring" role="tab" aria-controls="transactions" aria-selected="true" data-i18n="dashboard.tab.animalMonitoring"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="animals" role="tabpanel" aria-labelledby="animals-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="chart-box">
+                        <div>
+                            <span class="animalsMonthChart">
+                                <span data-i18n="dashboard.titleAnimalsBox"></span>
+                            </span>
+                            <span></span>
+                        </div>
+                        <div id="container-animals" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div></div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="chart-box">
+                        <div>
+                            <span data-i18n="dashboard.animalsAge.title"></span>
+                            <span>
+                                <select id="ddlperiodage">
+                                    <option value="0" selected data-i18n="animal.fields.genderAll"></option>
+                                    <option value="1" data-i18n="animal.fields.genderMale"></option>
+                                    <option value="2" data-i18n="animal.fields.genderFemale"></option>
+                                </select>
+                            </span>
+                        </div>
+                        <div id="container-age" style="min-width: 310px; height: 400px; max-width: 550px; margin: 0 auto"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="chart-box">
+                        <div>
+                            <span data-i18n="dashboard.birthDeathChart.title"></span>
+                            <span>
+                                <select id="ddlperiodbirth">
+                                    <option value="3" data-i18n="dashboard.options.last3months"></option>
+                                    <option value="6" data-i18n="dashboard.options.last6months" selected></option>
+                                    <option value="12" data-i18n="dashboard.options.last12months"></option>
+                                </select>
+                            </span>
+                        </div>
+                        <div id="container-birth" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="weighing" role="tabpanel" aria-labelledby="weighing-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="chart-box">
+                        <div>
+                            <span data-i18n="dashboard.numberWeightsChart.title"></span>
+                            <span>
+                                <select id="periodNumberWeights">
+                                    <option value="3" data-i18n="dashboard.options.last3months"></option>
+                                    <option value="6" data-i18n="dashboard.options.last6months" selected></option>
+                                    <option value="12" data-i18n="dashboard.options.last12months"></option>
+                                </select>
+                            </span>
+                        </div>
+                        <div id="container-number-weights" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+                    </div>
+                </div>	
+                
+                <div class="col-md-6">
+                    <div class="chart-box">
+                        <div>
+                            <span data-i18n="dashboard.averageWeightChart.title"></span>
+                            <span>
+                                <select id="gender">
+                                    <option value="0" data-i18n="select.values.both">Ambos</option>
+                                    <option value="1" data-i18n="animal.fields.genderMale">Macho</option>
+                                    <option value="2" data-i18n="animal.fields.genderFemale">Fêmea</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div id="container-weighing" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12">
+                    <div class="chart-box">
+                        <div>
+                                <span data-i18n="dashboard.animalWeightsChart.title"></span>
+                                <span>
+                                    <select id="animalsWithWeights"></select>
+									<i class="info-icon" data-toggle="tooltip" data-placement="right" data-i18n="[title]dashboard.animalWeightsChart.info">info</i>
+                                </span>
+                        </div>
+                        <div id="container-animalweighing" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12">
+                    <div class="chart-box">
+                        <div>
+                                <span data-i18n="dashboard.animalLostGainWeightsChart.title"></span>
+                                <span>
+                                    <select id="animalsWithLostGainWeight"></select>
+									<i class="info-icon" data-toggle="tooltip" data-placement="right" data-i18n="[title]dashboard.animalLostGainWeightsChart.info">info</i>	
+                                </span>
+                        </div>
+                        <div id="container-animalLostGainWeight" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="transactions" role="tabpanel" aria-labelledby="transaction-tab">
+            <div class="row">		
+				 <div class="col-md-6">
+                    <div class="chart-box">
+                        <div>
+                            <span data-i18n="dashboard.customersChart"></span>
+                            <span></span>
+                        </div>
+                        <div id="container-trans1" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+                    </div>
+                </div>
+			
+                <div class="col-md-6">
+                    <div class="chart-box">
+                        <div>
+                            <span data-i18n="dashboard.suppliersChart"></span>
+                            <span></span>
+                        </div>
+                        <div id="container-trans2" style="min-width: 310px; height: 400px; max-width: 550px; margin: 0 auto"></div>
+                    </div>
+                </div>
+				
+				<div class="col-md-6">
+                    <div class="chart-box">
+                        <div>
+                            <span data-i18n="dashboard.animalsTradedChart.title"></span>
+                            <span>
+								 <select id="ddlperiodTraded">
+                                    <option value="3" data-i18n="dashboard.options.last3months"></option>
+                                    <option value="6" data-i18n="dashboard.options.last6months" selected></option>
+                                    <option value="12" data-i18n="dashboard.options.last12months"></option>
+                                </select>
+							</span>
+                        </div>
+                        <div id="container-trans3" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+                    </div>
+                </div>
+				
+				<div class="col-md-6">
+                    <div class="chart-box">
+                        <div>
+                            <span data-i18n="dashboard.animalsTradingValueChart.title"></span>
+                            <span>
+								<select id="currency">
+								</select>
+								 <select id="ddlperiodTradedValue">
+                                    <option value="3" data-i18n="dashboard.options.last3months"></option>
+                                    <option value="6" data-i18n="dashboard.options.last6months" selected></option>
+                                    <option value="12" data-i18n="dashboard.options.last12months"></option>
+                                </select>
+							</span>
+                        </div>
+                        <div id="container-trans4" style="min-width: 310px; height: 400px; max-width: 550px; margin: 0 auto"></div>
+                    </div>
+                </div>
+				
+            </div>
+        </div>
+        
+        <div class="tab-pane fade" id="monitoring" role="tabpanel" aria-labelledby="monitoring-tab">
+            <div class="row">
+				<div class="col-md-12">
+                    <div class="chart-box">
+                        <div>
+                            <span data-i18n="dashboard.approximateDistanceChart.title"></span>
+                            <span>
+								<select id="deviceDistancePerHour">
+								</select>
+								 <select id="trdaysDistancePerHour">
+                                </select>
+							</span>
+                        </div>
+                        <div id="container-trans5" style="min-width: 310px; height: 400px; margin: 0 auto"></div>				
+                    </div>
+                </div>
+				
+				<div class="col-md-12">
+                    <div class="chart-box">
+                        <div>
+                            <span data-i18n="dashboard.approximateDistanceChart.title2"></span>
+                            <span>
+								<select id="deviceDistanceDay">
+								</select>
+								 <select id="trdaysDistanceDay">
+                                </select>
+							</span>
+                        </div>
+						<div id="container-trans6" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                    </div>
+                </div>	
+            </div>
+        </div>
+    
+    </div> 
+</div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="js/dashboard.js"></script> 
+      <script src="js/bundle-vendor-dashboard.js"></script>
+
+    <script src="js/bundle-util-dashboard.js"></script>
+</body>
+</html>

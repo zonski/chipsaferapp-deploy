@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous">
+        		
+		<link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css">
+		
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+<div class="main-content">
+    <div id="entry-add" class="add-panel">          
+        <div class="add-panel__wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 data-i18n="animal.add">Adicionar Animais</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="hidden" class="form-control field number" id="id" disabled>
+
+            <div class="col-md-2 form-group">
+                <label data-i18n="animal.fields.code">Código</label>
+                <input type="text" class="form-control field required" id="code" maxlength="50">
+            </div>
+
+            <div class="col-md-3 form-group">
+                <label data-i18n="animal.fields.nickName">Nome</label>
+                <input type="text" class="form-control field" id="nickName" maxlength="50">
+            </div>
+
+            <div class="col-md-3 form-group row-profile">
+                <label data-i18n="animal.fields.deviceCode">Dispositivo</label>      
+
+				<div class="select">
+					<select class="form-control field sub" id="device" data-sub="id" data-combo="device">
+					</select>
+				</div>
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label data-i18n="animal.fields.animalStatus">Status</label>                
+                <select class="form-control field sub" id="animalStatus" data-sub="id" data-combo="animalStatus"></select>
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label data-i18n="animal.fields.gender">Sexo</label>
+                <select class="form-control field" id="gender">
+                    <option value="1" data-i18n="animal.fields.genderMale">Macho</option>
+                    <option value="2" data-i18n="animal.fields.genderFemale">Fêmea</option>
+                </select>
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label data-i18n="animal.fields.classification">Class</label>
+                <select class="form-control field sub" id="classification" data-sub="id" data-combo="classification"></select>
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label data-i18n="animal.fields.subspecies">Raça</label>                
+                <select class="form-control field sub" id="subspecies" data-sub="id" data-combo="subspecies"></select>
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label data-i18n="animal.fields.pelage">Pelagem</label>
+                <select class="form-control field sub" id="pelage" data-sub="id" data-combo="pelage"></select>
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label data-i18n="animal.fields.dateBirth">Data de Nascimento</label>
+                <input type="text" class="form-control field required datepicker" id="dateBirth">
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label data-i18n="animal.fields.dateWeaning">Data de Desmama</label>
+                <input type="text" class="form-control field datepicker" id="dateWeaning">
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label data-i18n="animal.fields.dateCastrate">Data de Castração</label>
+                <input type="text" class="form-control field datepicker" id="dateCastrate">
+            </div>
+
+            <div class="col-md-2 form-group" id="female">
+                <label data-i18n="animal.fields.mother">Mãe</label>                
+                <select class="form-control field sub" id="mother" data-sub="id" data-combo="mother"></select>
+            </div>
+
+            <div class="col-md-2 form-group" id="male">
+                <label data-i18n="animal.fields.father">Pai</label>
+                <select class="form-control field sub" id="father" data-sub="id" data-combo="father"></select>
+            </div>
+			
+			<div class="col-md-3 form-group">
+                <label data-i18n="animal.fields.origin">Origem</label>
+                <select class="form-control field" id="origin">
+                    <option value="0" data-i18n="animal.fields.originOptions.bornProperty">Nascido na Propriedade</option>
+                    <option value="1" data-i18n="animal.fields.originOptions.acquired">Adquirido de Outra Propriedade</option>
+                </select>
+            </div>
+			
+			
+        </div>
+        </div>
+
+        <div class="add-panel__controls">
+			<div class="row">
+				<div class="col-md-12 text-right ">
+					<button class="btn btn-danger entry-action entry-btn" data-action="addCancel">
+						<i class="material-icons">close</i>
+						<span data-i18n="entry.cancel">Cancelar</span>
+					</button>
+					<button class="btn btn-success entry-action entry-btn" data-action="submit">
+						<i class="material-icons">save</i>
+						<span data-i18n="entry.save">Salvar</span>
+					</button>
+				</div>
+			</div>
+        </div>		  
+    </div>
+
+    <div id="group-add" class="add-panel">
+        <div class="add-panel__wrapper">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 data-i18n="animal.addGroup">Adicionar Grupo</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 form-group">
+                    <label data-i18n="animal.fields.quantity"></label>
+					<input type="number" class="form-control field required" id="quantity" min="1" value="1" step="1">
+                </div>
+							
+				<div class="col-md-2 form-group">
+					<label data-i18n="animal.fields.animalStatus">Status</label>                
+					<select class="form-control field sub" id="animalStatusGroup" data-sub="id" data-combo="animalStatus"></select>
+				</div>
+
+                <div class="col-md-2 form-group">
+                    <label data-i18n="animal.fields.gender">Sexo</label>
+                    <select class="form-control field" id="genderGroup">
+                        <option value="1" data-i18n="animal.fields.genderMale">Macho</option>
+                        <option value="2" data-i18n="animal.fields.genderFemale">Fêmea</option>
+                    </select>
+                </div>
+
+				<div class="col-md-2 form-group">
+                    <label data-i18n="animal.fields.classification">Classificação</label>
+                    <select class="form-control field sub" id="classification" data-sub="id" data-combo="classificationGroup"></select>
+                </div>
+				
+				<div class="col-md-2 form-group">
+					<label data-i18n="animal.fields.subspecies">Raça</label>                
+					<select class="form-control field sub" id="subspeciesGroup" data-sub="id" data-combo="subspecies"></select>
+				</div>
+				
+
+                <div class="col-md-2 form-group">
+                    <label data-i18n="animal.fields.pelage">Pelagem</label>
+                    <select class="form-control field sub" id="pelage" data-sub="id" data-combo="pelageGroup"></select>
+                </div>
+				
+				<div class="col-md-3 form-group">
+					<label data-i18n="animal.fields.origin">Origem</label>
+					<select class="form-control field" id="origin">
+						<option value="0" data-i18n="animal.fields.originOptions.bornProperty"></option>
+						<option value="1" data-i18n="animal.fields.originOptions.acquired"></option>
+					</select>
+				</div>	
+				
+            </div>
+        </div>
+        <div class="add-panel__controls">
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <button class="btn btn-danger group-action entry-btn" data-action="addCancel">
+                        <i class="material-icons">close</i>
+                        <span data-i18n="entry.cancel">Cancelar</span>
+                    </button>
+                    <button class="btn btn-success group-action entry-btn" data-action="submit">
+                        <i class="material-icons">save</i>
+                        <span data-i18n="entry.save">Salvar</span>
+                    </button>
+                </div>
+            </div>
+    </div>
+    </div>
+
+    <div class="main-content__wrapper main-content__header" id="entry-title">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 data-i18n="animal.title"></h1>
+            </div>
+            <div class="col-md-6">
+                <div class="main-content__controls">                
+
+                    <button class="btn btn-success entry-action" data-action="addOpen">
+                        <i class="material-icons">add</i>
+                        <span data-i18n="animal.add">Adicionar Animal</span>
+                    </button>    
+
+                    <button class="btn btn-success group-action" data-action="addOpen">
+                        <i class="material-icons">add</i>
+                        <span data-i18n="animal.addGroup">Adicionar Vários Animais</span>
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="entry-table main-content__wrapper">	
+        <table id="entry-table" class="display table">
+            <thead>
+                <tr>
+					<th hidden>ID</th>
+                    <th data-i18n="animal.fields.code">Código</th>                      
+                    <th data-i18n="animal.fields.nickName">Nome</th>
+                    <th data-i18n="animal.fields.deviceCode">Dispositivo</th>
+                    <th data-i18n="animal.fields.gender">Sexo</th>
+                    <th data-i18n="animal.fields.classification">Classificação</th>
+                    <th data-i18n="animal.fields.subspecies">Raça</th>
+                    <th data-i18n="animal.fields.pelage">Pelagem</th>
+                    <th data-i18n="animal.fields.dateBirth">Data de Nascimento</th>
+                    <th data-i18n="animal.fields.lot">Lote</th>
+                    <th data-i18n="animal.fields.mother">Mãe</th>
+                    <th data-i18n="animal.fields.father">Pai</th>
+                    <th data-i18n="animal.fields.weight">Peso Atual</th>
+                    <th data-i18n="animal.fields.animalStatus">Status Atual</th>
+                    <th id="edit" data-i18n="entry.options">Opções</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<script src="js/entryAnimal.js"></script>
+		<script src="js/bundle-vendor.js"></script>
+		
+		<!--
+		<script src="../app/js/lib/bootstrapOld.min.js"></script>
+		<script src="../app/js/lib/datatables_new.js"></script>
+		<script src="../app/js/lib/datatables.min.js"></script>
+		<script src="../app/js/lib/dataTables.buttons.min.js"></script> -->
+	  
+		<script src="js/bundle-vendor-entry.js"></script>
+
+		<script src="js/bundle-util.js"></script>
+    </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>        
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons|Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" crossorigin="anonymous">
+        		
+		<link rel="stylesheet" href="css/styles.min.css">
+		
+		<link rel="stylesheet" href="css/main.css">
+		
+    </head>
+    <body data-page="home">
+        <nav id="navbar"></nav>
+        <nav id="sidebar"></nav>
+
+      <div class="main-content">
+        <div id="entry-add" class="add-panel">
+          <div class="add-panel__wrapper">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 data-i18n="resourceArea.associate">Associar Recursos a Pastos e SubÁreas</h1>
+              </div>
+            </div>
+
+            <div class="row">
+              <input type="hidden" class="form-control field number" id="id" disabled>
+
+              <div class="col-md-4 form-group">
+                <label data-i18n="resourceArea.fields.code">Código</label>
+                <input type="text" class="form-control field required" id="code" maxlength="50">
+              </div>
+
+              <div class="col-md-4 form-group">
+                <label data-i18n="resourceArea.fields.resourceModel">Model de Recurso</label>
+                <select class="form-control field sub" id="resource" data-sub="id" data-combo="resource"></select>
+              </div>
+
+              <div class="col-md-3 form-group">
+                <label data-i18n="resourceArea.fields.area">Área</label>
+                <select class="form-control field sub" id="area" data-sub="id" data-type="line" data-combo="area"></select>
+              </div>
+
+              <div class="col-md-3 form-group">
+                <label data-i18n="area.fields.georef">Localização</label><br>
+                <button class="btn btn-success entry-action field" id="georeferencing" data-id="0" data-action="selectGeoref">
+                  <i class="material-icons">place</i>
+                  <span data-i18n="resourceArea.fields.georef">Localização</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="add-panel__controls">
+            <div class="row">
+              <div class="col-md-12 text-right">
+                <button class="btn btn-danger entry-action entry-btn" data-action="addCancel">
+                  <i class="material-icons">close</i>
+                  <span data-i18n="entry.cancel">Cancelar</span>
+                </button>
+
+                <button class="btn btn-success entry-action entry-btn" data-action="submit">
+                  <i class="material-icons">save</i>
+                  <span data-i18n="entry.save">Salvar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-content__wrapper">
+          <div id="entry-title">
+            <div class="row">
+              <div class="col-md-7">
+                <h1 data-i18n="resourceArea.title"></h1>
+              </div>
+
+              <div class="col-md-5">
+                <div class="main-content__controls">
+                  <button class="btn btn-success entry-action" data-action="addOpen">
+                    <i class="material-icons">link</i>
+                    <span data-i18n="resourceArea.associate">Adicionar Recurso</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="entry-table">
+            <table id="entry-table" class="display table">
+              <thead>
+                <tr>
+                  <th hidden>ID</th>
+                  <th data-i18n="resourceArea.fields.code">Código</th>
+                  <th data-i18n="resourceArea.fields.area">Área</th>
+                  <th data-i18n="resourceArea.fields.resourceModel">Modelo de Recurso</th>
+                  <th id="edit" data-i18n="entry.options">Opções</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="georef-modal">
+        <div class="modal-dialog draw-map">
+          <div class="modal-content draw-map">
+            <div class="modal-header">
+				<i class="material-icons vertical-center-header">place</i>
+				<h4 class="modal-title vertical-center-header" data-i18n="property.fields.georef">Localização</h4>
+            </div>
+
+            <div class="modal-body text-center">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <div class="btn-group" id="map-coord">
+                      <button type="button" class="btn btn-primary" id="map-btn">
+                        <i class="material-icons">map</i>
+                        <span data-i18n="georef.map">Mapa</span>
+                      </button>
+                      
+                      <button type="button" class="btn btn-default" id="text-btn">
+                        <i class="material-icons">add_location</i>
+                        <span data-i18n="georef.coordinates">Coordenadas</span>
+                      </button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="map"></div>
+
+              <div id="text">
+                <div class="row labels">
+                  <div class="col-md-6">
+                    <label data-i18n="georef.y">Latitude</label>
+                  </div>
+                  <div class="col-md-6">
+                    <label data-i18n="georef.x">Longitude</label>
+                  </div>
+                </div>
+
+                <div id="georefs" data-min="3"></div>
+
+                <div class="row" id="add-coord-row">
+                  <div class="col-md-12 text-center">
+                    <a data-action="addCoord" data-i18n="georef.add">Adicionar coordenada...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" id="btn-clear-draw">
+                <i class="material-icons">layers_clear</i>
+                <span data-i18n="georef.clear">Limpar</span>
+              </button>
+              <button type="button" data-dismiss="modal" class="btn btn-success" id="btn-true-georef">
+                <i class="material-icons">done</i>
+                  <span data-i18n="georef.confirm">Confirmar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-p1r_ULTiJLbbUOwC2B2yywLGsQ3vIcM&libraries=drawing"></script>
+      <script src="js/associateResourceArea.js"></script>
+		<script src="js/bundle-vendor.js"></script>
+		
+		<!--
+		<script src="../app/js/lib/bootstrapOld.min.js"></script>
+		<script src="../app/js/lib/datatables_new.js"></script>
+		<script src="../app/js/lib/datatables.min.js"></script>
+		<script src="../app/js/lib/dataTables.buttons.min.js"></script> -->
+	  
+		<script src="js/bundle-vendor-entry.js"></script>
+
+		<script src="js/bundle-util.js"></script>
+    </body>
+</html>
