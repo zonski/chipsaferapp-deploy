@@ -582,7 +582,8 @@
 			"animalOutPropertyAlert": "Animal Out Property Alert",
 			"anomalyOnDeviceAlert": "Anomaly On Device Alert",
 			"deviceResetAlert": "Device Reset Alert",
-			"fallenDeviceAlert": "Fallen Device Alert"
+			"fallenDeviceAlert": "Fallen Device Alert",
+			"returnToActiveAlert": "Device Return to Active Alert"
 		}
 	},
 

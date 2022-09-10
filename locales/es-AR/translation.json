@@ -586,7 +586,8 @@
 			"animalOutPropertyAlert": "Alerta de Animales Fuera de la Propiedad",
 			"anomalyOnDeviceAlert": "Alerta de Anomalía",
 			"deviceResetAlert": "Alerta de Dispositivo Reiniciado",
-			"fallenDeviceAlert": "Alerta de Dispositivo Caído"
+			"fallenDeviceAlert": "Alerta de Dispositivo Caído",
+            "returnToActiveAlert": "Alerta de dispositivo en actividad nuevamente"
 		}
 	},
 	
