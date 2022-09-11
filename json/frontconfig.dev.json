@@ -1,6 +1,6 @@
 {
-  "api": "http://localhost:5000/",
-  "apix": "https://platform.chipsafer.com:444/"
+  "apix": "http://localhost:5000/",
+  "api": "https://platform.chipsafer.com:444/"
 }
 
 
